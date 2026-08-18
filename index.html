@@ -31,16 +31,15 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar */
+        /* Top Bar - Email shifted to left, Social Icons on right */
         .top-bar {
             background-color: var(--navy-dark);
             color: #ffffff;
             font-size: 0.85rem;
             padding: 6px 20px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: space-between;
             align-items: center;
-            gap: 15px;
         }
 
         .top-bar a {
@@ -52,6 +51,12 @@
 
         .top-bar a:hover {
             color: var(--gold-text);
+        }
+
+        .top-bar-socials {
+            display: flex;
+            gap: 15px;
+            align-items: center;
         }
 
         /* Header */
@@ -73,7 +78,7 @@
         }
 
         .logo-text {
-            font-size: 1.3rem;
+            font-size: 1.15rem;
             font-weight: 900;
             color: var(--navy-dark);
             text-transform: uppercase;
@@ -86,6 +91,25 @@
             font-weight: 600;
             color: #64748b;
             display: block;
+        }
+
+        /* Call/Listen Tag in Center of Header */
+        .header-listen-tag {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--navy-dark);
+            background: #f1f5f9;
+            padding: 6px 14px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .header-listen-tag a {
+            color: var(--navy-dark);
+            text-decoration: none;
         }
 
         .nav-links {
@@ -150,7 +174,7 @@
         }
 
         .candidate-title-name {
-            font-size: 2.8rem;
+            font-size: 2.5rem;
             font-weight: 800;
             color: #ffffff;
             line-height: 1;
@@ -158,7 +182,7 @@
         }
 
         .candidate-title-last {
-            font-size: 4rem;
+            font-size: 3.2rem;
             font-weight: 900;
             color: #ffffff;
             line-height: 0.95;
@@ -301,12 +325,16 @@
         }
 
         /* Responsive Mobile View */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .nav-links {
                 display: none;
             }
             .hamburger {
                 display: block;
+            }
+            .header-listen-tag {
+                font-size: 0.75rem;
+                padding: 4px 8px;
             }
             .hero-grid {
                 flex-direction: column;
@@ -317,13 +345,13 @@
                 padding: 50px 15px 15px 15px;
             }
             .candidate-title-name {
-                font-size: 2.2rem;
+                font-size: 1.8rem;
             }
             .candidate-title-last {
-                font-size: 3.2rem;
+                font-size: 2.4rem;
             }
             .candidate-ward {
-                font-size: 1.2rem;
+                font-size: 1.1rem;
             }
             .hero-right {
                 width: 100%;
@@ -344,12 +372,14 @@
 </head>
 <body>
 
-    <!-- Top Bar with Your Direct Social Links -->
+    <!-- Top Bar: Email on Far Left, Social Icons on Right -->
     <div class="top-bar">
         <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
-        <a href="https://www.facebook.com/share/18B3d68S9x/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <div class="top-bar-socials">
+            <a href="https://www.facebook.com/share/18B3d68S9x/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+        </div>
     </div>
 
     <!-- Header -->
@@ -360,6 +390,13 @@
                 <span class="logo-sub">For Ward 2 Councillor</span>
             </a>
             
+            <!-- Central "I am here to listen" Tag -->
+            <div class="header-listen-tag">
+                <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i>
+                <span>I am here to listen: <a href="tel:6472890583">647-289-0583</a></span>
+            </div>
+
+            <!-- Desktop Navigation -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#priorities">Priorities</a></li>
@@ -367,6 +404,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
+            <!-- Mobile Hamburger Menu -->
             <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
