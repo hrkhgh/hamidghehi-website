@@ -134,17 +134,17 @@
             padding: 0;
         }
 
-        /* Faded Canadian Maple Leaf Background Effect */
+        /* Faded Canadian Flag Overlay Effect */
         .hero-banner::after {
-            content: "\f06c"; /* Maple Leaf Icon */
-            font-family: "Font Awesome 6 Free";
-            font-weight: 900;
+            content: "";
             position: absolute;
-            left: -50px;
-            bottom: -60px;
-            font-size: 26rem;
-            color: rgba(255, 255, 255, 0.04);
-            transform: rotate(-15deg);
+            left: -20px;
+            bottom: -20px;
+            width: 320px;
+            height: 240px;
+            background: url('https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg') no-repeat center center / contain;
+            opacity: 0.08;
+            transform: rotate(-10deg);
             pointer-events: none;
             z-index: 1;
         }
@@ -349,9 +349,11 @@
                 font-size: 0.78rem;
             }
             .hero-banner::after {
-                font-size: 18rem;
-                left: -30px;
-                bottom: -40px;
+                width: 220px;
+                height: 160px;
+                left: -10px;
+                bottom: -10px;
+                opacity: 0.07;
             }
             .hero-grid {
                 flex-direction: column;
@@ -423,7 +425,7 @@
         </header>
     </div>
 
-    <!-- Hero Banner with Faded Leaf Effect -->
+    <!-- Hero Banner with Faded Canadian Flag Overlay -->
     <section class="hero-banner" id="home">
         <div class="red-ribbon">ELECT</div>
         
