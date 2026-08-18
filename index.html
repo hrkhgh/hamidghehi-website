@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>حمیدرضا خیرخواه | وب‌سایت تخصصی شبکه و زیرساخت</title>
+    <title>Hamidreza Kheirkhah | Candidate for Richmond Hill Ward 2 Councillor</title>
     <style>
         :root {
             --primary-color: #1e3a8a;
@@ -29,16 +29,28 @@
             line-height: 1.6;
         }
 
-        /* Top Bar & Header */
+        /* Top Notification Bar */
         .top-bar {
             background-color: var(--dark-bg);
             color: #94a3b8;
             font-size: 0.875rem;
             padding: 8px 20px;
-            text-align: left;
-            direction: ltr;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
+        .lang-switch {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Header & Navigation */
         header {
             background: #ffffff;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
@@ -57,7 +69,7 @@
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: var(--primary-color);
             text-decoration: none;
@@ -80,7 +92,7 @@
             color: var(--accent-color);
         }
 
-        /* Hero Section */
+        /* Hero Banner */
         .hero {
             background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
             color: #ffffff;
@@ -94,7 +106,7 @@
         }
 
         .hero h1 {
-            font-size: 2.5rem;
+            font-size: 2.4rem;
             margin-bottom: 15px;
             color: #ffffff;
         }
@@ -107,15 +119,15 @@
 
         .quote-box {
             background: rgba(255, 255, 255, 0.1);
-            border-right: 4px solid var(--accent-color);
+            border-left: 4px solid var(--accent-color);
             padding: 15px 20px;
             margin-top: 30px;
             border-radius: 4px;
-            text-align: right;
+            text-align: left;
             font-style: italic;
         }
 
-        /* Main Content & Features */
+        /* Main Content Grid */
         .main-container {
             max-width: 1100px;
             margin: 60px auto;
@@ -194,6 +206,7 @@
             cursor: pointer;
             font-size: 1rem;
             width: 100%;
+            font-weight: 600;
         }
 
         .btn:hover {
@@ -223,18 +236,19 @@
 <body>
 
     <div class="top-bar">
-        <span>hamidghehi.ca</span>
+        <span>hamidghehi.ca | Richmond Hill Ward 2</span>
+        <span class="lang-switch" onclick="alert('Persian language support coming soon!')">فارسی</span>
     </div>
 
     <header>
         <div class="header-container">
-            <a href="#" class="logo">حمیدرضا خیرخواه </a>
+            <a href="#" class="logo">Hamidreza Kheirkhah</a>
             <nav>
                 <ul>
-                    <li><a href="#home">خانه</a></li>
-                    <li><a href="#services">خدمات</a></li>
-                    <li><a href="#about">درباره من</a></li>
-                    <li><a href="#contact">تماس</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#priorities">Priorities</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Get Involved</a></li>
                 </ul>
             </nav>
         </div>
@@ -242,56 +256,56 @@
 
     <section class="hero" id="home">
         <div class="hero-container">
-            <h1>تخصص در زیرساخت شبکه و تحلیل سیستم‌های مخابراتی</h1>
-            <p>ارائه راهکارهای کارآمد برای بهبود، عیب‌یابی و بهینه‌سازی شبکه‌های ارتباطی پیچیده</p>
+            <h1>Candidate for City Councillor — Ward 2, Richmond Hill</h1>
+            <p>Smart growth, transparent governance, and practical solutions for our community.</p>
             
             <div class="quote-box">
-                "تحلیل دقیق داده‌ها و پایش زیرساخت‌ها، کلید ثبات و پایداری در شبکه‌های پیشرفته مدرن است."
+                "A dedicated voice for Ward 2 residents. Committed to fiscal discipline, community safety, and data-driven municipal planning."
             </div>
         </div>
     </section>
 
-    <div class="main-container" id="services">
-        <h2 class="section-title">حوزه‌های فعالیت تخصصی</h2>
+    <div class="main-container" id="priorities">
+        <h2 class="section-title">Key Campaign Priorities</h2>
         <div class="grid">
             <div class="card">
-                <h3>پایش و عیب‌یابی شبکه</h3>
-                <p>شناسایی سریع اختلالات، عیب‌یابی لایه‌های مختلف شبکه و افزایش پایداری زیرساخت‌های ارتباطی.</p>
+                <h3>Smart Growth & Infrastructure</h3>
+                <p>Managing urban development while preserving neighborhood character, improving local transit, and upgrading Ward 2 infrastructure.</p>
             </div>
             <div class="card">
-                <h3>تحلیل داده‌های مخابراتی</h3>
-                <p>بررسی و تحلیل دقیق ترافیک شبکه جهت بهینه‌سازی پهنای باند و بهبود کیفیت خدمات (QoS).</p>
+                <h3>Community Safety & Traffic</h3>
+                <p>Enhancing road safety in residential areas, managing traffic congestion, and supporting local neighborhood watch programs.</p>
             </div>
             <div class="card">
-                <h3>مدیریت زیرساخت‌های فناوری</h3>
-                <p>طراحی، پیکربندی و نگهداری تجهیزات ارتباطی طبق آخرین استانداردهای فنی.</p>
+                <h3>Fiscal Discipline & Accountability</h3>
+                <p>Ensuring responsible spending of municipal tax dollars, transparent decision-making, and open communication with constituents.</p>
             </div>
         </div>
     </div>
 
     <section class="contact-section" id="contact">
         <div class="contact-container">
-            <h2 class="section-title">ارتباط با من</h2>
+            <h2 class="section-title">Connect & Get Involved</h2>
             <form action="#">
                 <div class="form-group">
-                    <label>نام و نام خانوادگی</label>
-                    <input type="text" required placeholder="نام شما">
+                    <label>Full Name</label>
+                    <input type="text" required placeholder="Your Name">
                 </div>
                 <div class="form-group">
-                    <label>ایمیل</label>
-                    <input type="email" required placeholder="example@domain.com">
+                    <label>Email Address / Phone Number</label>
+                    <input type="text" required placeholder="your.email@example.com">
                 </div>
                 <div class="form-group">
-                    <label>پیام شما</label>
-                    <textarea rows="5" required placeholder="متن پیام خود را بنویسید..."></textarea>
+                    <label>Message / Request a Lawn Sign</label>
+                    <textarea rows="5" required placeholder="How can we work together for Ward 2?"></textarea>
                 </div>
-                <button type="submit" class="btn">ارسال پیام</button>
+                <button type="submit" class="btn">Send Message</button>
             </form>
         </div>
     </section>
 
     <footer>
-        <p>&copy; 2026 Hamidreza Kheirkhah Ghehi — All Rights Reserved.</p>
+        <p>&copy; 2026 Hamidreza Kheirkhah Campaign — Ward 2 Richmond Hill. All Rights Reserved.</p>
     </footer>
 
 </body>
