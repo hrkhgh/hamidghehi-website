@@ -31,7 +31,7 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar */
+        /* Top Bar: Clean Single Line (Email Left, Socials Right) */
         .top-bar {
             background-color: var(--navy-dark);
             color: #ffffff;
@@ -91,26 +91,6 @@
             font-weight: 600;
             color: #64748b;
             display: block;
-        }
-
-        /* Call Tag - Clean styling */
-        .header-listen-tag {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--navy-dark);
-            background: #f1f5f9;
-            padding: 6px 16px;
-            border-radius: 20px;
-            border: 1px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-        }
-
-        .header-listen-tag a {
-            color: var(--navy-dark);
-            text-decoration: none;
         }
 
         .nav-links {
@@ -196,6 +176,30 @@
             font-size: 1.4rem;
             font-weight: 600;
             color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        /* Call Button Inside Hero */
+        .hero-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            padding: 8px 18px;
+            border-radius: 30px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            backdrop-filter: blur(5px);
+            transition: all 0.2s ease;
+        }
+
+        .hero-phone-btn:hover {
+            background: var(--gold-text);
+            color: var(--navy-dark);
+            border-color: var(--gold-text);
         }
 
         .hero-right {
@@ -325,7 +329,7 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive Mobile Layout Fixes */
+        /* Responsive Mobile View */
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
@@ -333,22 +337,13 @@
             .hamburger {
                 display: block;
             }
-            .header-listen-tag {
-                display: none; /* Hide heavy tag in white header for mobile */
-            }
-            .top-bar {
-                flex-direction: column;
-                gap: 6px;
-                text-align: center;
-                padding: 10px;
-            }
             .hero-grid {
                 flex-direction: column;
                 text-align: center;
                 min-height: auto;
             }
             .hero-left {
-                padding: 50px 15px 15px 15px;
+                padding: 50px 15px 20px 15px;
             }
             .candidate-title-name {
                 font-size: 1.8rem;
@@ -358,6 +353,11 @@
             }
             .candidate-ward {
                 font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+            .hero-phone-btn {
+                font-size: 0.85rem;
+                padding: 6px 14px;
             }
             .hero-right {
                 width: 100%;
@@ -378,13 +378,10 @@
 </head>
 <body>
 
-    <!-- Top Bar: Mobile friendly layout -->
+    <!-- Top Bar: Clean Email on Left, Social Links on Right -->
     <div class="top-bar">
-        <a href="tel:6472890583" style="font-weight: 700; color: var(--gold-text);">
-            <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i> I am here to listen: 647-289-0583
-        </a>
+        <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
         <div class="top-bar-socials">
-            <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
             <a href="https://www.facebook.com/share/18B3d68S9x/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -398,12 +395,6 @@
                 Hamidreza KHEIRKHAH GHEHI
                 <span class="logo-sub">For Ward 2 Councillor</span>
             </a>
-            
-            <!-- Central Tag for Desktop -->
-            <div class="header-listen-tag">
-                <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i>
-                <span>I am here to listen: <a href="tel:6472890583">647-289-0583</a></span>
-            </div>
 
             <!-- Desktop Navigation -->
             <ul class="nav-links">
@@ -429,6 +420,12 @@
                 <div class="candidate-title-name">Hamidreza</div>
                 <div class="candidate-title-last">KHEIRKHAH GHEHI</div>
                 <div class="candidate-ward">For Ward 2 Councillor</div>
+                
+                <!-- Styled Direct Call Button -->
+                <a href="tel:6472890583" class="hero-phone-btn">
+                    <i class="fas fa-phone-alt" style="color: var(--gold-text);"></i>
+                    <span>I am here to listen: 647-289-0583</span>
+                </a>
             </div>
             
             <div class="hero-right">
