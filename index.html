@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --dark-green: #183324;
-            --deep-green: #0d2116;
+            --navy-dark: #071222;
+            --navy-blue: #0b1e36;
             --red-tag: #b91c1c;
             --gold-text: #facc15;
             --light-bg: #f8fafc;
@@ -41,7 +41,7 @@
 
         /* Top Bar */
         .top-bar {
-            background-color: var(--deep-green);
+            background-color: var(--navy-dark);
             color: #ffffff;
             font-size: 0.85rem;
             padding: 8px 20px;
@@ -92,7 +92,7 @@
         .logo-text {
             font-size: 1.15rem;
             font-weight: 900;
-            color: var(--deep-green);
+            color: var(--navy-dark);
             text-transform: uppercase;
             line-height: 1.1;
             text-decoration: none;
@@ -122,16 +122,30 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--deep-green);
+            color: var(--navy-dark);
         }
 
-        /* Hero Banner with Green Background matching photo */
+        /* Hero Banner with Full Image Overlay */
         .hero-banner {
-            background: linear-gradient(135deg, #0d2116 0%, #1a3828 50%, #244733 100%);
-            color: #ffffff;
             position: relative;
+            background: url('Main.png') no-repeat center right / cover;
+            color: #ffffff;
+            min-height: 480px;
+            display: flex;
+            align-items: center;
             overflow: hidden;
-            padding: 0;
+        }
+
+        /* Dark Gradient Overlay for Readability */
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, rgba(7, 18, 34, 0.92) 0%, rgba(7, 18, 34, 0.75) 50%, rgba(7, 18, 34, 0.2) 100%);
+            z-index: 1;
         }
 
         .red-ribbon {
@@ -152,18 +166,19 @@
         .hero-grid {
             max-width: 1200px;
             margin: 0 auto;
+            width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             position: relative;
-            min-height: 420px;
+            z-index: 2;
+            padding: 40px 20px;
         }
 
         .hero-left {
-            padding: 60px 20px 30px 30px;
-            z-index: 2;
-            flex: 1;
+            padding: 40px 20px 20px 20px;
+            max-width: 600px;
         }
 
         .candidate-title-name {
@@ -172,6 +187,7 @@
             color: #ffffff;
             line-height: 1;
             text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .candidate-title-last {
@@ -182,51 +198,37 @@
             letter-spacing: 1px;
             margin-bottom: 10px;
             text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .candidate-ward {
             font-size: 1.4rem;
             font-weight: 600;
             color: #cbd5e1;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
-        .hero-right {
-            flex: 1;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            justify-content: flex-end;
-            width: 100%;
-        }
-
-        /* Image Smooth Blend */
-        .candidate-photo {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            display: block;
-            object-fit: cover;
-            border-radius: 8px;
-            mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+        .slogan-badge-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 3;
         }
 
         .slogan-badge {
-            background: rgba(13, 33, 22, 0.92);
-            border-left: 5px solid var(--gold-text);
+            background: rgba(7, 18, 34, 0.9);
+            border-top: 4px solid var(--gold-text);
             padding: 12px 20px;
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--gold-text);
-            z-index: 3;
-            width: 100%;
             text-align: center;
         }
 
         /* Call to Action Sub-Banner */
         .cta-bar {
-            background-color: var(--deep-green);
+            background-color: var(--navy-dark);
             color: #ffffff;
             text-align: center;
             padding: 20px 15px;
@@ -265,7 +267,7 @@
         }
 
         .card h3 {
-            color: var(--deep-green);
+            color: var(--navy-dark);
             font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: 700;
@@ -301,7 +303,7 @@
         }
 
         .btn {
-            background: var(--deep-green);
+            background: var(--navy-dark);
             color: white;
             padding: 12px;
             border: none;
@@ -314,7 +316,7 @@
 
         /* Footer */
         footer {
-            background: var(--deep-green);
+            background: var(--navy-dark);
             color: #94a3b8;
             text-align: center;
             padding: 25px 20px;
@@ -336,13 +338,19 @@
             .top-bar-phone {
                 font-size: 0.78rem;
             }
+            .hero-banner {
+                background-position: center top;
+                min-height: 420px;
+            }
+            .hero-banner::before {
+                background: linear-gradient(180deg, rgba(7, 18, 34, 0.85) 0%, rgba(7, 18, 34, 0.4) 50%, rgba(7, 18, 34, 0.9) 100%);
+            }
             .hero-grid {
-                flex-direction: column;
                 text-align: center;
-                min-height: auto;
+                justify-content: center;
             }
             .hero-left {
-                padding: 45px 15px 15px 15px;
+                padding: 40px 10px 60px 10px;
             }
             .candidate-title-name {
                 font-size: 1.8rem;
@@ -352,17 +360,6 @@
             }
             .candidate-ward {
                 font-size: 1.1rem;
-            }
-            .hero-right {
-                width: 100%;
-                align-items: center;
-            }
-            .slogan-badge {
-                position: relative;
-                border-left: none;
-                border-top: 4px solid var(--gold-text);
-                font-size: 1rem;
-                padding: 12px 10px;
             }
             .cta-bar {
                 font-size: 1.3rem;
@@ -406,7 +403,7 @@
         </header>
     </div>
 
-    <!-- Hero Banner -->
+    <!-- Hero Banner with Integrated Background -->
     <section class="hero-banner" id="home">
         <div class="red-ribbon">ELECT</div>
         
@@ -416,11 +413,10 @@
                 <div class="candidate-title-last">KHEIRKHAH GHEHI</div>
                 <div class="candidate-ward">For Ward 2 Councillor</div>
             </div>
-            
-            <div class="hero-right">
-                <img src="Main.png" alt="Hamidreza Kheirkhah Ghehi" class="candidate-photo">
-                <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
-            </div>
+        </div>
+
+        <div class="slogan-badge-container">
+            <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
         </div>
     </section>
 
