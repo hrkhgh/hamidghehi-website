@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            /* Natural Park Palette Extracted from Photo */
-            --park-green-dark: #1b2e1e;
-            --park-green-mid: #2d4a32;
+            --navy-dark: #071222;
+            --navy-blue: #0b1e36;
             --red-tag: #b91c1c;
             --gold-text: #facc15;
             --light-bg: #f8fafc;
@@ -42,7 +41,7 @@
 
         /* Top Bar */
         .top-bar {
-            background-color: var(--park-green-dark);
+            background-color: var(--navy-dark);
             color: #ffffff;
             font-size: 0.85rem;
             padding: 8px 20px;
@@ -93,7 +92,7 @@
         .logo-text {
             font-size: 1.15rem;
             font-weight: 900;
-            color: var(--park-green-dark);
+            color: var(--navy-dark);
             text-transform: uppercase;
             line-height: 1.1;
             text-decoration: none;
@@ -123,12 +122,12 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--park-green-dark);
+            color: var(--navy-dark);
         }
 
-        /* Hero Banner with Park Natural Green Gradient */
+        /* Hero Banner */
         .hero-banner {
-            background: linear-gradient(135deg, #1b2e1e 0%, #253e2a 50%, #2f4d34 100%);
+            background: linear-gradient(135deg, #071222 0%, #0f2b48 100%);
             color: #ffffff;
             position: relative;
             overflow: hidden;
@@ -159,7 +158,6 @@
             justify-content: space-between;
             position: relative;
             min-height: 420px;
-            z-index: 2;
         }
 
         .hero-left {
@@ -189,7 +187,7 @@
         .candidate-ward {
             font-size: 1.4rem;
             font-weight: 600;
-            color: #d1d5db;
+            color: #cbd5e1;
         }
 
         .hero-right {
@@ -202,22 +200,16 @@
             width: 100%;
         }
 
-        /* Natural Blend for Photo Frame Removal */
         .candidate-photo {
             width: 100%;
             max-width: 450px;
             height: auto;
             display: block;
             object-fit: cover;
-            /* Soft side and bottom fade to merge with background */
-            mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%), linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-            -webkit-mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 20%), linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
-            mask-composite: intersect;
-            -webkit-mask-composite: destination-in;
         }
 
         .slogan-badge {
-            background: rgba(27, 46, 30, 0.92);
+            background: rgba(0, 0, 0, 0.9);
             border-left: 5px solid var(--gold-text);
             padding: 12px 20px;
             font-size: 1.1rem;
@@ -230,7 +222,7 @@
 
         /* Call to Action Sub-Banner */
         .cta-bar {
-            background-color: var(--park-green-dark);
+            background-color: var(--navy-dark);
             color: #ffffff;
             text-align: center;
             padding: 20px 15px;
@@ -269,7 +261,7 @@
         }
 
         .card h3 {
-            color: var(--park-green-dark);
+            color: var(--navy-dark);
             font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: 700;
@@ -305,7 +297,7 @@
         }
 
         .btn {
-            background: var(--park-green-dark);
+            background: var(--navy-dark);
             color: white;
             padding: 12px;
             border: none;
@@ -318,7 +310,7 @@
 
         /* Footer */
         footer {
-            background: var(--park-green-dark);
+            background: var(--navy-dark);
             color: #94a3b8;
             text-align: center;
             padding: 25px 20px;
@@ -410,7 +402,7 @@
         </header>
     </div>
 
-    <!-- Hero Banner with Natural Green Blend -->
+    <!-- Hero Banner -->
     <section class="hero-banner" id="home">
         <div class="red-ribbon">ELECT</div>
         
