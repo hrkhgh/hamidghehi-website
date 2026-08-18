@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hamidreza Kheirkhah Ghehi | Candidate for Richmond Hill Ward 2 Councillor</title>
-    <!-- FontAwesome for Social Media Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --navy-dark: #0b1e36;
-            --navy-blue: #132a4a;
+            --navy-dark: #071222;
+            --navy-blue: #0b1e36;
             --red-tag: #b91c1c;
             --gold-text: #facc15;
             --light-bg: #f8fafc;
@@ -33,46 +32,20 @@
 
         /* Top Bar */
         .top-bar {
-            background-color: #071222;
-            color: #94a3b8;
+            background-color: var(--navy-dark);
+            color: #ffffff;
             font-size: 0.85rem;
-            padding: 8px 30px;
+            padding: 6px 20px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .top-bar-right {
-            display: flex;
+            justify-content: flex-end;
             align-items: center;
             gap: 15px;
-        }
-
-        .social-icon {
-            color: #ffffff;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
-        .social-icon:hover {
-            color: var(--gold-text);
         }
 
         .top-bar a {
             color: #ffffff;
             text-decoration: none;
-        }
-
-        .lang-btn {
-            background: rgba(255,255,255,0.1);
-            color: #fff;
-            padding: 2px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            cursor: pointer;
+            font-size: 0.85rem;
         }
 
         /* Header */
@@ -90,11 +63,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 15px 30px;
+            padding: 12px 20px;
         }
 
         .logo-text {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 900;
             color: var(--navy-dark);
             text-transform: uppercase;
@@ -103,34 +76,40 @@
         }
 
         .logo-sub {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             font-weight: 600;
             color: #64748b;
             display: block;
         }
 
-        nav ul {
+        /* Desktop Nav & Mobile Hamburger */
+        .nav-links {
             display: flex;
             list-style: none;
-            gap: 25px;
+            gap: 20px;
         }
 
-        nav a {
+        .nav-links a {
             text-decoration: none;
             color: var(--text-heading);
             font-weight: 600;
             font-size: 0.95rem;
         }
 
-        /* Hero Banner - Adam Cooper Style Split Layout */
+        .hamburger {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--navy-dark);
+        }
+
+        /* Hero Banner */
         .hero-banner {
-            background: linear-gradient(135deg, #071222 0%, #132a4a 100%);
+            background: linear-gradient(135deg, #071222 0%, #0f2b48 100%);
             color: #ffffff;
             position: relative;
             overflow: hidden;
-            min-height: 480px;
-            display: flex;
-            align-items: center;
+            padding: 0;
         }
 
         .red-ribbon {
@@ -140,57 +119,57 @@
             background-color: var(--red-tag);
             color: #ffffff;
             font-weight: 900;
-            font-size: 1.5rem;
-            padding: 10px 40px 10px 30px;
+            font-size: 1.4rem;
+            padding: 8px 30px 8px 20px;
             letter-spacing: 2px;
             text-transform: uppercase;
-            clip-path: polygon(0 0, 100% 0, 88% 100%, 0 100%);
-            z-index: 2;
+            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
+            z-index: 5;
         }
 
         .hero-grid {
             max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
+            display: flex;
+            flex-direction: row;
             align-items: center;
-            padding: 60px 30px 20px 30px;
+            justify-content: space-between;
             position: relative;
-            z-index: 1;
+            min-height: 420px;
         }
 
         .hero-left {
-            padding-top: 40px;
+            padding: 60px 20px 30px 30px;
+            z-index: 2;
+            flex: 1;
         }
 
         .candidate-title-name {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             color: #ffffff;
             line-height: 1;
-            margin-bottom: 5px;
             text-transform: uppercase;
         }
 
         .candidate-title-last {
-            font-size: 3.8rem;
+            font-size: 4rem;
             font-weight: 900;
             color: #ffffff;
             line-height: 0.95;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             text-transform: uppercase;
         }
 
         .candidate-ward {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 600;
             color: #cbd5e1;
-            margin-bottom: 25px;
         }
 
         .hero-right {
+            flex: 1;
             position: relative;
             display: flex;
             justify-content: flex-end;
@@ -198,33 +177,35 @@
         }
 
         .candidate-photo {
-            max-width: 100%;
-            max-height: 440px;
-            object-fit: contain;
-            filter: drop-shadow(0px 10px 20px rgba(0,0,0,0.5));
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .slogan-badge {
             position: absolute;
             bottom: 20px;
-            left: -30px;
+            right: 0;
+            left: auto;
             background: rgba(0, 0, 0, 0.85);
             border-left: 5px solid var(--gold-text);
-            padding: 12px 25px;
-            font-size: 1.25rem;
+            padding: 10px 20px;
+            font-size: 1.1rem;
             font-weight: 700;
             color: var(--gold-text);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            white-space: nowrap;
+            z-index: 3;
+            max-width: 80%;
         }
 
         /* Call to Action Sub-Banner */
         .cta-bar {
-            background-color: #08172c;
+            background-color: var(--navy-dark);
             color: #ffffff;
             text-align: center;
-            padding: 25px 20px;
-            font-size: 1.8rem;
+            padding: 20px 15px;
+            font-size: 1.5rem;
             font-weight: 800;
             border-top: 1px solid rgba(255,255,255,0.1);
         }
@@ -232,36 +213,36 @@
         /* Priorities & Grid */
         .main-container {
             max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 30px;
+            margin: 40px auto;
+            padding: 0 20px;
         }
 
         .section-title {
             text-align: center;
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--text-heading);
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             font-weight: 800;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: #ffffff;
             border: 1px solid var(--border-color);
             border-radius: 8px;
-            padding: 30px;
+            padding: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
         }
 
         .card h3 {
             color: var(--navy-dark);
-            font-size: 1.3rem;
-            margin-bottom: 12px;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
             font-weight: 700;
         }
 
@@ -269,7 +250,7 @@
         .contact-section {
             background: #ffffff;
             border-top: 1px solid var(--border-color);
-            padding: 60px 30px;
+            padding: 40px 20px;
         }
 
         .contact-container {
@@ -278,18 +259,18 @@
         }
 
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: 600;
         }
 
         .form-group input, .form-group textarea {
             width: 100%;
-            padding: 12px;
+            padding: 10px;
             border: 1px solid var(--border-color);
             border-radius: 6px;
         }
@@ -297,90 +278,99 @@
         .btn {
             background: var(--navy-dark);
             color: white;
-            padding: 14px;
+            padding: 12px;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            font-size: 1.1rem;
+            font-size: 1rem;
             width: 100%;
             font-weight: 700;
         }
 
         /* Footer */
         footer {
-            background: #071222;
+            background: var(--navy-dark);
             color: #94a3b8;
             text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
+            padding: 25px 20px;
+            font-size: 0.85rem;
         }
 
-        /* Responsive Mobile Styling */
-        @media (max-width: 900px) {
+        /* STRICT MOBILE VIEW FIT (Adam Cooper Style) */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide text menu on mobile */
+            }
+            .hamburger {
+                display: block; /* Show hamburger icon ☰ */
+            }
             .hero-grid {
-                grid-template-columns: 1fr;
+                flex-direction: column;
                 text-align: center;
-                padding-top: 60px;
+                min-height: auto;
+            }
+            .hero-left {
+                padding: 50px 15px 15px 15px;
             }
             .candidate-title-name {
-                font-size: 1.8rem;
+                font-size: 2.2rem;
             }
             .candidate-title-last {
-                font-size: 2.8rem;
+                font-size: 3.2rem;
             }
             .candidate-ward {
                 font-size: 1.2rem;
             }
             .hero-right {
+                width: 100%;
                 justify-content: center;
-                margin-top: 20px;
             }
             .slogan-badge {
                 position: relative;
-                left: 0;
                 bottom: 0;
-                margin: 15px auto 0 auto;
-                white-space: normal;
-                font-size: 1rem;
+                right: 0;
+                max-width: 100%;
+                margin: 0 auto;
+                text-align: center;
+                border-left: none;
+                border-top: 4px solid var(--gold-text);
             }
             .cta-bar {
                 font-size: 1.3rem;
-            }
-            .top-bar {
-                justify-content: center;
             }
         }
     </style>
 </head>
 <body>
 
-    <!-- Top Bar with Social Links -->
+    <!-- Top Bar -->
     <div class="top-bar">
-        <div>hamidghehi.ca | Richmond Hill Ward 2</div>
-        <div class="top-bar-right">
-            <a href="https://instagram.com" target="_blank" class="social-icon" title="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://facebook.com" target="_blank" class="social-icon" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://youtube.com" target="_blank" class="social-icon" title="YouTube"><i class="fab fa-youtube"></i></a>
-            <a href="mailto:info@hamidghehi.ca">info@hamidghehi.ca</a>
-            <span class="lang-btn" onclick="alert('Persian language coming soon!')">فارسی</span>
-        </div>
+        <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
 
     <!-- Header -->
     <header>
         <div class="header-container">
             <a href="#" class="logo-text">
-                Hamidreza Kheirkhah
+                Hamidreza KHEIRKHAH
                 <span class="logo-sub">For Ward 2 Councillor</span>
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#priorities">Priorities</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
+            
+            <!-- Desktop Links -->
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Hamburger Icon -->
+            <div class="hamburger" onclick="alert('Menu clicked!')">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
