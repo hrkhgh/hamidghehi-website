@@ -28,6 +28,7 @@
             background-color: var(--light-bg);
             color: var(--text-main);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Top Bar */
@@ -82,7 +83,6 @@
             display: block;
         }
 
-        /* Desktop Nav & Mobile Hamburger */
         .nav-links {
             display: flex;
             list-style: none;
@@ -172,8 +172,10 @@
             flex: 1;
             position: relative;
             display: flex;
-            justify-content: flex-end;
+            flex-direction: column;
             align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
         }
 
         .candidate-photo {
@@ -185,18 +187,15 @@
         }
 
         .slogan-badge {
-            position: absolute;
-            bottom: 20px;
-            right: 0;
-            left: auto;
-            background: rgba(0, 0, 0, 0.85);
+            background: rgba(0, 0, 0, 0.9);
             border-left: 5px solid var(--gold-text);
-            padding: 10px 20px;
+            padding: 12px 20px;
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--gold-text);
             z-index: 3;
-            max-width: 80%;
+            width: 100%;
+            text-align: center;
         }
 
         /* Call to Action Sub-Banner */
@@ -296,13 +295,13 @@
             font-size: 0.85rem;
         }
 
-        /* STRICT MOBILE VIEW FIT (Adam Cooper Style) */
+        /* Responsive Mobile View */
         @media (max-width: 768px) {
             .nav-links {
-                display: none; /* Hide text menu on mobile */
+                display: none;
             }
             .hamburger {
-                display: block; /* Show hamburger icon ☰ */
+                display: block;
             }
             .hero-grid {
                 flex-direction: column;
@@ -323,17 +322,14 @@
             }
             .hero-right {
                 width: 100%;
-                justify-content: center;
+                align-items: center;
             }
             .slogan-badge {
                 position: relative;
-                bottom: 0;
-                right: 0;
-                max-width: 100%;
-                margin: 0 auto;
-                text-align: center;
                 border-left: none;
                 border-top: 4px solid var(--gold-text);
+                font-size: 1rem;
+                padding: 12px 10px;
             }
             .cta-bar {
                 font-size: 1.3rem;
@@ -355,11 +351,10 @@
     <header>
         <div class="header-container">
             <a href="#" class="logo-text">
-                Hamidreza KHEIRKHAH
+                Hamidreza KHEIRKHAH GHEHI
                 <span class="logo-sub">For Ward 2 Councillor</span>
             </a>
             
-            <!-- Desktop Links -->
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#priorities">Priorities</a></li>
@@ -367,8 +362,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
 
-            <!-- Mobile Hamburger Icon -->
-            <div class="hamburger" onclick="alert('Menu clicked!')">
+            <div class="hamburger">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
@@ -381,12 +375,12 @@
         <div class="hero-grid">
             <div class="hero-left">
                 <div class="candidate-title-name">Hamidreza</div>
-                <div class="candidate-title-last">KHEIRKHAH</div>
+                <div class="candidate-title-last">KHEIRKHAH GHEHI</div>
                 <div class="candidate-ward">For Ward 2 Councillor</div>
             </div>
             
             <div class="hero-right">
-                <img src="Main.png" alt="Hamidreza Kheirkhah" class="candidate-photo">
+                <img src="Main.png" alt="Hamidreza Kheirkhah Ghehi" class="candidate-photo">
                 <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
             </div>
         </div>
@@ -440,7 +434,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Hamidreza Kheirkhah Campaign — Ward 2 Richmond Hill. All Rights Reserved.</p>
+        <p>&copy; 2026 Hamidreza Kheirkhah Ghehi Campaign — Ward 2 Richmond Hill. All Rights Reserved.</p>
     </footer>
 
 </body>
