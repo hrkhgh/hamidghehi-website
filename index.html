@@ -31,7 +31,7 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Top Header Group */
+        /* Fixed Top Header Group (Top Bar + Header stay fixed together on scroll) */
         .sticky-wrapper {
             position: sticky;
             top: 0;
@@ -39,7 +39,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Top Bar */
+        /* Top Bar: Clean Single Line (Phone/Listen Left, Socials Right) */
         .top-bar {
             background-color: var(--navy-dark);
             color: #ffffff;
@@ -125,27 +125,13 @@
             color: var(--navy-dark);
         }
 
-        /* Hero Banner with Full Image Overlay */
+        /* Hero Banner */
         .hero-banner {
-            position: relative;
-            background: url('Main.png') no-repeat center right / cover;
+            background: linear-gradient(135deg, #071222 0%, #0f2b48 100%);
             color: #ffffff;
-            min-height: 480px;
-            display: flex;
-            align-items: center;
+            position: relative;
             overflow: hidden;
-        }
-
-        /* Dark Gradient Overlay for Readability */
-        .hero-banner::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(90deg, rgba(7, 18, 34, 0.92) 0%, rgba(7, 18, 34, 0.75) 50%, rgba(7, 18, 34, 0.2) 100%);
-            z-index: 1;
+            padding: 0;
         }
 
         .red-ribbon {
@@ -166,19 +152,18 @@
         .hero-grid {
             max-width: 1200px;
             margin: 0 auto;
-            width: 100%;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             position: relative;
-            z-index: 2;
-            padding: 40px 20px;
+            min-height: 420px;
         }
 
         .hero-left {
-            padding: 40px 20px 20px 20px;
-            max-width: 600px;
+            padding: 60px 20px 30px 30px;
+            z-index: 2;
+            flex: 1;
         }
 
         .candidate-title-name {
@@ -187,7 +172,6 @@
             color: #ffffff;
             line-height: 1;
             text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .candidate-title-last {
@@ -198,31 +182,41 @@
             letter-spacing: 1px;
             margin-bottom: 10px;
             text-transform: uppercase;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
         }
 
         .candidate-ward {
             font-size: 1.4rem;
             font-weight: 600;
             color: #cbd5e1;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
         }
 
-        .slogan-badge-container {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            z-index: 3;
+        .hero-right {
+            flex: 1;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .candidate-photo {
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+            display: block;
+            object-fit: cover;
         }
 
         .slogan-badge {
-            background: rgba(7, 18, 34, 0.9);
-            border-top: 4px solid var(--gold-text);
+            background: rgba(0, 0, 0, 0.9);
+            border-left: 5px solid var(--gold-text);
             padding: 12px 20px;
             font-size: 1.1rem;
             font-weight: 700;
             color: var(--gold-text);
+            z-index: 3;
+            width: 100%;
             text-align: center;
         }
 
@@ -338,19 +332,13 @@
             .top-bar-phone {
                 font-size: 0.78rem;
             }
-            .hero-banner {
-                background-position: center top;
-                min-height: 420px;
-            }
-            .hero-banner::before {
-                background: linear-gradient(180deg, rgba(7, 18, 34, 0.85) 0%, rgba(7, 18, 34, 0.4) 50%, rgba(7, 18, 34, 0.9) 100%);
-            }
             .hero-grid {
+                flex-direction: column;
                 text-align: center;
-                justify-content: center;
+                min-height: auto;
             }
             .hero-left {
-                padding: 40px 10px 60px 10px;
+                padding: 45px 15px 15px 15px;
             }
             .candidate-title-name {
                 font-size: 1.8rem;
@@ -361,6 +349,17 @@
             .candidate-ward {
                 font-size: 1.1rem;
             }
+            .hero-right {
+                width: 100%;
+                align-items: center;
+            }
+            .slogan-badge {
+                position: relative;
+                border-left: none;
+                border-top: 4px solid var(--gold-text);
+                font-size: 1rem;
+                padding: 12px 10px;
+            }
             .cta-bar {
                 font-size: 1.3rem;
             }
@@ -369,8 +368,9 @@
 </head>
 <body>
 
-    <!-- STICKY HEADER GROUP -->
+    <!-- STICKY HEADER GROUP (Top Bar + Header stay fixed together on scroll) -->
     <div class="sticky-wrapper">
+        <!-- Top Bar -->
         <div class="top-bar">
             <a href="tel:6472890583" class="top-bar-phone">
                 <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i> Here to Listen & Act: 647-289-0583
@@ -382,6 +382,7 @@
             </div>
         </div>
 
+        <!-- Header -->
         <header>
             <div class="header-container">
                 <a href="#" class="logo-text">
@@ -389,6 +390,7 @@
                     <span class="logo-sub">For Ward 2 Councillor</span>
                 </a>
 
+                <!-- Desktop Navigation -->
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#priorities">Priorities</a></li>
@@ -396,6 +398,7 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
 
+                <!-- Mobile Hamburger Menu -->
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -403,7 +406,7 @@
         </header>
     </div>
 
-    <!-- Hero Banner with Integrated Background -->
+    <!-- Hero Banner -->
     <section class="hero-banner" id="home">
         <div class="red-ribbon">ELECT</div>
         
@@ -413,10 +416,11 @@
                 <div class="candidate-title-last">KHEIRKHAH GHEHI</div>
                 <div class="candidate-ward">For Ward 2 Councillor</div>
             </div>
-        </div>
-
-        <div class="slogan-badge-container">
-            <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
+            
+            <div class="hero-right">
+                <img src="Main.png" alt="Hamidreza Kheirkhah Ghehi" class="candidate-photo">
+                <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
+            </div>
         </div>
     </section>
 
