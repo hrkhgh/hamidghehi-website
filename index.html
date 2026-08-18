@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --navy-dark: #071222;
-            --navy-blue: #0b1e36;
+            --dark-green: #183324;
+            --deep-green: #0d2116;
             --red-tag: #b91c1c;
             --gold-text: #facc15;
             --light-bg: #f8fafc;
@@ -41,7 +41,7 @@
 
         /* Top Bar */
         .top-bar {
-            background-color: var(--navy-dark);
+            background-color: var(--deep-green);
             color: #ffffff;
             font-size: 0.85rem;
             padding: 8px 20px;
@@ -92,7 +92,7 @@
         .logo-text {
             font-size: 1.15rem;
             font-weight: 900;
-            color: var(--navy-dark);
+            color: var(--deep-green);
             text-transform: uppercase;
             line-height: 1.1;
             text-decoration: none;
@@ -122,12 +122,12 @@
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--navy-dark);
+            color: var(--deep-green);
         }
 
-        /* Hero Banner with Soft Gradient Background */
+        /* Hero Banner with Green Background matching photo */
         .hero-banner {
-            background: linear-gradient(135deg, #071222 0%, #0d2847 50%, #11355c 100%);
+            background: linear-gradient(135deg, #0d2116 0%, #1a3828 50%, #244733 100%);
             color: #ffffff;
             position: relative;
             overflow: hidden;
@@ -200,22 +200,20 @@
             width: 100%;
         }
 
-        /* Image Blend / Fading Effect */
+        /* Image Smooth Blend */
         .candidate-photo {
             width: 100%;
             max-width: 450px;
             height: auto;
             display: block;
             object-fit: cover;
-            border-radius: 12px;
-            /* Soft Edge Blending */
-            box-shadow: 0 0 30px rgba(7, 18, 34, 0.8);
+            border-radius: 8px;
             mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
             -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
         }
 
         .slogan-badge {
-            background: rgba(7, 18, 34, 0.92);
+            background: rgba(13, 33, 22, 0.92);
             border-left: 5px solid var(--gold-text);
             padding: 12px 20px;
             font-size: 1.1rem;
@@ -228,7 +226,7 @@
 
         /* Call to Action Sub-Banner */
         .cta-bar {
-            background-color: var(--navy-dark);
+            background-color: var(--deep-green);
             color: #ffffff;
             text-align: center;
             padding: 20px 15px;
@@ -267,7 +265,7 @@
         }
 
         .card h3 {
-            color: var(--navy-dark);
+            color: var(--deep-green);
             font-size: 1.2rem;
             margin-bottom: 10px;
             font-weight: 700;
@@ -303,7 +301,7 @@
         }
 
         .btn {
-            background: var(--navy-dark);
+            background: var(--deep-green);
             color: white;
             padding: 12px;
             border: none;
@@ -316,7 +314,7 @@
 
         /* Footer */
         footer {
-            background: var(--navy-dark);
+            background: var(--deep-green);
             color: #94a3b8;
             text-align: center;
             padding: 25px 20px;
