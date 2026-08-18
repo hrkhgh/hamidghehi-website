@@ -1,33 +1,73 @@
-import React from 'react';
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حمیدرضا خیرخواه قیخی | hamidghehi.ca</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8fafc;
+            color: #0f172a;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 80vh;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: #1e293b;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 24px;
+        }
+        nav a {
+            color: #2563eb;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: 500;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 32px;
+            font-size: 0.875rem;
+            color: #94a3b8;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>حمیدرضا خیرخواه قیخی</h1>
+        <p>متخصص تحلیل داده‌های شبکه، زیرساخت‌های مخابراتی و عیب‌یابی سیستم‌های پیچیده</p>
+        
+        <nav>
+            <a href="#about">درباره من</a> | 
+            <a href="#experience">سوابق تخصصی</a> | 
+            <a href="#contact">تماس</a>
+        </nav>
 
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 font-sans">
-      <header className="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
-        <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="text-xl font-bold tracking-tight text-cyan-400">
-            HAMIDGHEHI<span className="text-slate-400">.CA</span>
-          </div>
-          <nav className="hidden md:flex gap-8 text-sm font-medium text-slate-300">
-            <a href="#about" className="hover:text-cyan-400 transition">درباره من</a>
-            <a href="#experience" className="hover:text-cyan-400 transition">سوابق تخصصی</a>
-            <a href="#contact" className="hover:text-cyan-400 transition">تماس</a>
-          </nav>
-        </div>
-      </header>
-
-      <section className="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center text-center">
-        <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6 text-slate-100">
-          حمیدرضا خیرخواه قیخی
-        </h1>
-        <p className="max-w-2xl text-lg text-slate-400 leading-relaxed mb-8">
-          متخصص تحلیل داده‌های شبکه، زیرساخت‌های مخابراتی و عیب‌یابی سیستم‌های پیچیده.
-        </p>
-      </section>
-
-      <footer className="border-t border-slate-900 py-8 text-center text-xs text-slate-500">
-        © Hamidreza Kheirkhah Ghehi — hamidghehi.ca
-      </footer>
+        <footer>
+            &copy; Hamidreza Kheirkhah Ghehi — hamidghehi.ca
+        </footer>
     </div>
-  );
-}
+</body>
+</html>
