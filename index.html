@@ -31,7 +31,7 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Top Header Group (Top Bar + Header stay fixed together on scroll) */
+        /* Fixed Top Header Group */
         .sticky-wrapper {
             position: sticky;
             top: 0;
@@ -39,7 +39,7 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Top Bar: Clean Single Line (Phone/Listen Left, Socials Right) */
+        /* Top Bar */
         .top-bar {
             background-color: var(--navy-dark);
             color: #ffffff;
@@ -134,6 +134,21 @@
             padding: 0;
         }
 
+        /* Faded Canadian Maple Leaf Background Effect */
+        .hero-banner::after {
+            content: "\f06c"; /* Maple Leaf Icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            left: -50px;
+            bottom: -60px;
+            font-size: 26rem;
+            color: rgba(255, 255, 255, 0.04);
+            transform: rotate(-15deg);
+            pointer-events: none;
+            z-index: 1;
+        }
+
         .red-ribbon {
             position: absolute;
             top: 0;
@@ -158,6 +173,7 @@
             justify-content: space-between;
             position: relative;
             min-height: 420px;
+            z-index: 2;
         }
 
         .hero-left {
@@ -332,6 +348,11 @@
             .top-bar-phone {
                 font-size: 0.78rem;
             }
+            .hero-banner::after {
+                font-size: 18rem;
+                left: -30px;
+                bottom: -40px;
+            }
             .hero-grid {
                 flex-direction: column;
                 text-align: center;
@@ -368,9 +389,8 @@
 </head>
 <body>
 
-    <!-- STICKY HEADER GROUP (Top Bar + Header stay fixed together on scroll) -->
+    <!-- STICKY HEADER GROUP -->
     <div class="sticky-wrapper">
-        <!-- Top Bar -->
         <div class="top-bar">
             <a href="tel:6472890583" class="top-bar-phone">
                 <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i> Here to Listen & Act: 647-289-0583
@@ -382,7 +402,6 @@
             </div>
         </div>
 
-        <!-- Header -->
         <header>
             <div class="header-container">
                 <a href="#" class="logo-text">
@@ -390,7 +409,6 @@
                     <span class="logo-sub">For Ward 2 Councillor</span>
                 </a>
 
-                <!-- Desktop Navigation -->
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#priorities">Priorities</a></li>
@@ -398,7 +416,6 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
 
-                <!-- Mobile Hamburger Menu -->
                 <div class="hamburger">
                     <i class="fas fa-bars"></i>
                 </div>
@@ -406,7 +423,7 @@
         </header>
     </div>
 
-    <!-- Hero Banner -->
+    <!-- Hero Banner with Faded Leaf Effect -->
     <section class="hero-banner" id="home">
         <div class="red-ribbon">ELECT</div>
         
