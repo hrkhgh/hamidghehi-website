@@ -31,12 +31,12 @@
             overflow-x: hidden;
         }
 
-        /* Top Bar - Email shifted to left, Social Icons on right */
+        /* Top Bar */
         .top-bar {
             background-color: var(--navy-dark);
             color: #ffffff;
             font-size: 0.85rem;
-            padding: 6px 20px;
+            padding: 8px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -93,18 +93,19 @@
             display: block;
         }
 
-        /* Call/Listen Tag in Center of Header */
+        /* Call Tag - Clean styling */
         .header-listen-tag {
             font-size: 0.9rem;
             font-weight: 700;
             color: var(--navy-dark);
             background: #f1f5f9;
-            padding: 6px 14px;
+            padding: 6px 16px;
             border-radius: 20px;
             border: 1px solid var(--border-color);
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+            white-space: nowrap;
         }
 
         .header-listen-tag a {
@@ -324,7 +325,7 @@
             font-size: 0.85rem;
         }
 
-        /* Responsive Mobile View */
+        /* Responsive Mobile Layout Fixes */
         @media (max-width: 900px) {
             .nav-links {
                 display: none;
@@ -333,8 +334,13 @@
                 display: block;
             }
             .header-listen-tag {
-                font-size: 0.75rem;
-                padding: 4px 8px;
+                display: none; /* Hide heavy tag in white header for mobile */
+            }
+            .top-bar {
+                flex-direction: column;
+                gap: 6px;
+                text-align: center;
+                padding: 10px;
             }
             .hero-grid {
                 flex-direction: column;
@@ -372,10 +378,13 @@
 </head>
 <body>
 
-    <!-- Top Bar: Email on Far Left, Social Icons on Right -->
+    <!-- Top Bar: Mobile friendly layout -->
     <div class="top-bar">
-        <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
+        <a href="tel:6472890583" style="font-weight: 700; color: var(--gold-text);">
+            <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i> I am here to listen: 647-289-0583
+        </a>
         <div class="top-bar-socials">
+            <a href="mailto:info@hamidghehi.ca"><i class="fas fa-envelope"></i> info@hamidghehi.ca</a>
             <a href="https://www.facebook.com/share/18B3d68S9x/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
             <a href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
@@ -390,7 +399,7 @@
                 <span class="logo-sub">For Ward 2 Councillor</span>
             </a>
             
-            <!-- Central "I am here to listen" Tag -->
+            <!-- Central Tag for Desktop -->
             <div class="header-listen-tag">
                 <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i>
                 <span>I am here to listen: <a href="tel:6472890583">647-289-0583</a></span>
