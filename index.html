@@ -3,18 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamidreza Kheirkhah Ghehi | Candidate for Richmond Hill Ward 2 Councillor</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <title>
+        Hamidreza Kheirkhah Ghehi | Ward 2 Councillor Candidate | Richmond Hill
+    </title>
+
+    <meta
+        name="description"
+        content="Hamidreza Kheirkhah Ghehi is a candidate for Ward 2 Councillor in Richmond Hill. Learn about his priorities, campaign, and vision for Ward 2."
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+
     <style>
+        /* =========================================================
+           GLOBAL VARIABLES
+        ========================================================= */
+
         :root {
             --navy-dark: #071222;
             --navy-blue: #0b1e36;
-            --red-tag: #b91c1c;
-            --gold-text: #facc15;
+            --navy-light: #153a60;
+
+            --red: #b91c1c;
+            --red-hover: #991b1b;
+
+            --gold: #facc15;
+
+            --white: #ffffff;
             --light-bg: #f8fafc;
+            --soft-bg: #eef2f7;
+
             --text-heading: #0f172a;
             --text-main: #334155;
-            --border-color: #e2e8f0;
+            --text-light: #64748b;
+
+            --border: #e2e8f0;
+
+            --shadow:
+                0 8px 28px rgba(15, 23, 42, 0.08);
         }
 
         * {
@@ -23,453 +54,2823 @@
             padding: 0;
         }
 
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 110px;
+        }
+
         body {
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background-color: var(--light-bg);
+            font-family:
+                system-ui,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+
+            background: var(--light-bg);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.65;
             overflow-x: hidden;
         }
 
-        /* Fixed Top Header Group */
+        img {
+            max-width: 100%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        section {
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-left: 22px;
+            padding-right: 22px;
+        }
+
+        /* =========================================================
+           STICKY HEADER
+        ========================================================= */
+
         .sticky-wrapper {
             position: sticky;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 999;
+            box-shadow:
+                0 2px 12px rgba(0, 0, 0, 0.12);
         }
 
-        /* Top Bar */
+        /* =========================================================
+           TOP BAR
+        ========================================================= */
+
         .top-bar {
-            background-color: var(--navy-dark);
-            color: #ffffff;
-            font-size: 0.85rem;
-            padding: 8px 20px;
+            background: var(--navy-dark);
+            color: var(--white);
+        }
+
+        .top-bar-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 7px 20px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
+
+            gap: 20px;
         }
 
-        .top-bar a {
-            color: #ffffff;
+        .phone-link {
             text-decoration: none;
-            font-size: 0.85rem;
-            transition: color 0.2s;
-        }
-
-        .top-bar a:hover {
-            color: var(--gold-text);
-        }
-
-        .top-bar-phone {
+            font-size: 0.86rem;
             font-weight: 700;
-            color: var(--gold-text) !important;
+
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
+
+            transition: 0.2s;
         }
 
-        .top-bar-socials {
+        .phone-link i {
+            color: var(--gold);
+        }
+
+        .phone-link:hover {
+            color: var(--gold);
+        }
+
+        .social-links {
             display: flex;
-            gap: 15px;
             align-items: center;
+            gap: 16px;
         }
 
-        /* Header */
+        .social-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+
+        .social-links a:hover {
+            color: var(--gold);
+            transform: translateY(-1px);
+        }
+
+        /* =========================================================
+           MAIN HEADER
+        ========================================================= */
+
         header {
-            background: #ffffff;
+            background: var(--white);
         }
 
         .header-container {
             max-width: 1200px;
             margin: 0 auto;
+            min-height: 72px;
+            padding: 10px 20px;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 12px 20px;
-        }
 
-        .logo-text {
-            font-size: 1.15rem;
-            font-weight: 900;
-            color: var(--navy-dark);
-            text-transform: uppercase;
-            line-height: 1.1;
-            text-decoration: none;
-        }
-
-        .logo-sub {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #64748b;
-            display: block;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
             gap: 20px;
         }
 
-        .nav-links a {
+        .logo {
+            text-decoration: none;
+            color: var(--navy-dark);
+            line-height: 1.05;
+        }
+
+        .logo-first {
+            display: block;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo-last {
+            display: block;
+            font-size: 1.2rem;
+            font-weight: 900;
+            letter-spacing: 0.4px;
+        }
+
+        .logo-sub {
+            display: block;
+            margin-top: 5px;
+            color: var(--text-light);
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .desktop-nav {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 22px;
+        }
+
+        .desktop-nav a {
             text-decoration: none;
             color: var(--text-heading);
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.93rem;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .desktop-nav a:hover {
+            color: var(--red);
+        }
+
+        .header-cta {
+            padding: 10px 17px;
+            background: var(--red);
+            color: var(--white) !important;
+            border-radius: 6px;
+        }
+
+        .header-cta:hover {
+            background: var(--red-hover);
         }
 
         .hamburger {
             display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
+            background: transparent;
+            border: none;
             color: var(--navy-dark);
+            font-size: 1.6rem;
+            cursor: pointer;
         }
 
-        /* Hero Banner */
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        .mobile-nav {
+            display: none;
+            background: var(--white);
+            border-top: 1px solid var(--border);
+        }
+
+        .mobile-nav.active {
+            display: block;
+        }
+
+        .mobile-nav ul {
+            list-style: none;
+            padding: 10px 20px 20px;
+        }
+
+        .mobile-nav li {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-nav a {
+            display: block;
+            padding: 14px 5px;
+            text-decoration: none;
+            color: var(--text-heading);
+            font-weight: 700;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
         .hero-banner {
-            background: linear-gradient(135deg, #071222 0%, #0f2b48 100%);
-            color: #ffffff;
             position: relative;
             overflow: hidden;
-            padding: 0;
+            color: var(--white);
+
+            background:
+                radial-gradient(
+                    circle at 80% 40%,
+                    rgba(46, 91, 135, 0.35),
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #06101e 0%,
+                    #0c233c 60%,
+                    #153b60 100%
+                );
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(255,255,255,0.015),
+                    transparent
+                );
+            pointer-events: none;
         }
 
         .red-ribbon {
             position: absolute;
-            top: 0;
             left: 0;
-            background-color: var(--red-tag);
-            color: #ffffff;
+            top: 0;
+            z-index: 10;
+
+            padding: 10px 45px 10px 24px;
+
+            background: var(--red);
+            color: var(--white);
+
+            font-size: 1.3rem;
             font-weight: 900;
-            font-size: 1.4rem;
-            padding: 8px 30px 8px 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-            z-index: 5;
+            letter-spacing: 3px;
+
+            clip-path:
+                polygon(
+                    0 0,
+                    100% 0,
+                    82% 100%,
+                    0 100%
+                );
         }
 
         .hero-grid {
             max-width: 1200px;
+            min-height: 520px;
             margin: 0 auto;
-            display: flex;
-            flex-direction: row;
+
+            display: grid;
+            grid-template-columns: 1.08fr 0.92fr;
+
             align-items: center;
-            justify-content: space-between;
+        }
+
+        .hero-content {
             position: relative;
-            min-height: 420px;
+            z-index: 3;
+
+            padding:
+                75px 30px
+                65px 30px;
         }
 
-        .hero-left {
-            padding: 60px 20px 30px 30px;
-            z-index: 2;
-            flex: 1;
-        }
-
-        .candidate-title-name {
-            font-size: 2.5rem;
+        .hero-eyebrow {
+            color: var(--gold);
             font-weight: 800;
-            color: #ffffff;
-            line-height: 1;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.88rem;
+            margin-bottom: 15px;
         }
 
-        .candidate-title-last {
-            font-size: 3.2rem;
-            font-weight: 900;
-            color: #ffffff;
+        .candidate-first-name {
+            font-size: clamp(
+                2.2rem,
+                5vw,
+                3.4rem
+            );
+
+            font-weight: 800;
             line-height: 0.95;
-            letter-spacing: 1px;
-            margin-bottom: 10px;
             text-transform: uppercase;
         }
 
-        .candidate-ward {
+        .candidate-last-name {
+            margin-top: 5px;
+
+            font-size: clamp(
+                2.5rem,
+                5.5vw,
+                4rem
+            );
+
+            font-weight: 950;
+            line-height: 0.95;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .candidate-position {
+            margin-top: 18px;
+            color: #dbeafe;
             font-size: 1.4rem;
             font-weight: 600;
-            color: #cbd5e1;
         }
 
-        .hero-right {
-            flex: 1;
-            position: relative;
+        .hero-message {
+            max-width: 650px;
+            margin-top: 23px;
+
+            color: #cbd5e1;
+            font-size: 1.08rem;
+            line-height: 1.6;
+        }
+
+        .hero-points {
+            margin-top: 20px;
+
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hero-point {
+            padding: 7px 12px;
+
+            border: 1px solid
+                rgba(255,255,255,0.2);
+
+            background:
+                rgba(255,255,255,0.06);
+
+            border-radius: 50px;
+
+            font-size: 0.83rem;
+            font-weight: 700;
+        }
+
+        .hero-actions {
+            margin-top: 28px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            min-height: 46px;
+            padding: 12px 21px;
+
+            border: none;
+            border-radius: 6px;
+
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 800;
+
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-red {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        .btn-red:hover {
+            background: var(--red-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid
+                rgba(255,255,255,0.55);
+
+            background: transparent;
+            color: var(--white);
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--navy-dark);
+        }
+
+        .hero-photo-wrapper {
+            height: 100%;
+            min-height: 520px;
+
+            display: flex;
+            justify-content: center;
             align-items: flex-end;
-            justify-content: flex-end;
-            width: 100%;
+
+            position: relative;
         }
 
         .candidate-photo {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
             display: block;
-            object-fit: cover;
+
+            width: 100%;
+            max-width: 490px;
+            max-height: 520px;
+
+            object-fit: contain;
+            object-position: center bottom;
+
+            position: relative;
+            z-index: 2;
         }
 
         .slogan-badge {
-            background: rgba(0, 0, 0, 0.9);
-            border-left: 5px solid var(--gold-text);
-            padding: 12px 20px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--gold-text);
-            z-index: 3;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            z-index: 5;
+
             width: 100%;
-            text-align: center;
-        }
 
-        /* Call to Action Sub-Banner */
-        .cta-bar {
-            background-color: var(--navy-dark);
-            color: #ffffff;
+            padding: 13px 18px;
+
+            background:
+                rgba(3, 9, 18, 0.93);
+
+            border-top: 3px solid var(--gold);
+
+            color: var(--gold);
+
             text-align: center;
-            padding: 20px 15px;
-            font-size: 1.5rem;
+            font-size: 1.02rem;
             font-weight: 800;
-            border-top: 1px solid rgba(255,255,255,0.1);
         }
 
-        /* Priorities & Grid */
-        .main-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
+        /* =========================================================
+           CTA BAR
+        ========================================================= */
+
+        .cta-bar {
+            background: var(--red);
+            color: var(--white);
+            padding: 19px 20px;
+        }
+
+        .cta-bar-inner {
+            max-width: 1050px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 25px;
+        }
+
+        .cta-bar-text strong {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .cta-bar-text span {
+            font-size: 0.9rem;
+            color: #fee2e2;
+        }
+
+        .cta-bar-actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        .cta-small {
+            background: var(--white);
+            color: var(--red);
+
+            padding: 10px 15px;
+            border-radius: 5px;
+
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 800;
+
+            white-space: nowrap;
+        }
+
+        /* =========================================================
+           GENERAL SECTION
+        ========================================================= */
+
+        .section {
+            padding: 75px 0;
+        }
+
+        .section-soft {
+            background: var(--soft-bg);
+        }
+
+        .section-white {
+            background: var(--white);
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 42px;
+            text-align: center;
+        }
+
+        .section-label {
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.76rem;
+            font-weight: 900;
+            margin-bottom: 8px;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 1.8rem;
             color: var(--text-heading);
-            margin-bottom: 30px;
-            font-weight: 800;
+            font-size: clamp(
+                1.8rem,
+                4vw,
+                2.45rem
+            );
+
+            line-height: 1.2;
+            font-weight: 850;
+
+            margin-bottom: 14px;
         }
 
-        .grid {
+        .section-description {
+            color: var(--text-light);
+            font-size: 1rem;
+        }
+
+        /* =========================================================
+           WHY RUNNING
+        ========================================================= */
+
+        .why-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+
+            grid-template-columns:
+                minmax(0, 0.8fr)
+                minmax(0, 1.2fr);
+
+            gap: 55px;
+            align-items: center;
         }
 
-        .card {
-            background: #ffffff;
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+        .why-highlight {
+            min-height: 300px;
+
+            padding: 38px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--navy-dark),
+                    var(--navy-light)
+                );
+
+            color: var(--white);
+
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
         }
 
-        .card h3 {
-            color: var(--navy-dark);
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        .why-highlight i {
+            font-size: 2.2rem;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+
+        .why-highlight h3 {
+            font-size: 1.8rem;
+            line-height: 1.25;
+            margin-bottom: 15px;
+        }
+
+        .why-highlight p {
+            color: #cbd5e1;
+        }
+
+        .why-copy h2 {
+            color: var(--text-heading);
+            font-size: 2rem;
+            margin-bottom: 18px;
+        }
+
+        .why-copy p {
+            margin-bottom: 15px;
+        }
+
+        .quote {
+            margin-top: 22px;
+            padding-left: 18px;
+            border-left: 4px solid var(--red);
+
+            color: var(--text-heading);
             font-weight: 700;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background: #ffffff;
-            border-top: 1px solid var(--border-color);
-            padding: 40px 20px;
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns:
+                minmax(280px, 0.8fr)
+                minmax(0, 1.2fr);
+
+            gap: 55px;
+            align-items: center;
         }
 
-        .contact-container {
-            max-width: 600px;
+        .about-photo-card {
+            position: relative;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--navy-dark),
+                    var(--navy-light)
+                );
+
+            padding: 18px;
+            border-radius: 12px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .about-photo-card img {
+            width: 100%;
+            display: block;
+
+            border-radius: 8px;
+        }
+
+        .about-content h2 {
+            color: var(--text-heading);
+            font-size: 2.15rem;
+            margin-bottom: 18px;
+        }
+
+        .about-content p {
+            margin-bottom: 14px;
+        }
+
+        .about-values {
+            margin-top: 22px;
+
+            display: grid;
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 12px;
+        }
+
+        .about-value {
+            padding: 14px;
+
+            background: var(--soft-bg);
+            border-radius: 7px;
+
+            text-align: center;
+        }
+
+        .about-value i {
+            display: block;
+            color: var(--red);
+            font-size: 1.2rem;
+            margin-bottom: 7px;
+        }
+
+        .about-value span {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--text-heading);
+        }
+
+        /* =========================================================
+           PRIORITIES
+        ========================================================= */
+
+        .priority-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+        }
+
+        .priority-card {
+            position: relative;
+
+            padding: 28px 25px;
+
+            background: var(--white);
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            box-shadow:
+                0 5px 18px
+                rgba(15, 23, 42, 0.04);
+
+            transition: all 0.25s;
+        }
+
+        .priority-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: #cbd5e1;
+        }
+
+        .priority-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin-bottom: 18px;
+
+            border-radius: 9px;
+
+            background: #fef2f2;
+            color: var(--red);
+
+            font-size: 1.25rem;
+        }
+
+        .priority-card h3 {
+            color: var(--navy-dark);
+            font-size: 1.13rem;
+            margin-bottom: 11px;
+        }
+
+        .priority-card p {
+            color: var(--text-light);
+            font-size: 0.94rem;
+        }
+
+        /* =========================================================
+           WARD 2
+        ========================================================= */
+
+        .ward-grid {
+            display: grid;
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+            align-items: center;
+        }
+
+        .ward-visual {
+            min-height: 370px;
+
+            padding: 45px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    var(--navy-dark),
+                    var(--navy-light)
+                );
+
+            border-radius: 12px;
+            color: var(--white);
+        }
+
+        .ward-visual i {
+            color: var(--gold);
+            font-size: 4rem;
+            margin-bottom: 18px;
+        }
+
+        .ward-number {
+            font-size: 4.2rem;
+            font-weight: 950;
+            line-height: 1;
+        }
+
+        .ward-visual p {
+            margin-top: 12px;
+            color: #cbd5e1;
+        }
+
+        .ward-content h2 {
+            color: var(--text-heading);
+            font-size: 2.1rem;
+            margin-bottom: 18px;
+        }
+
+        .ward-content p {
+            margin-bottom: 15px;
+        }
+
+        .ward-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .ward-list li {
+            margin-bottom: 10px;
+
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .ward-list i {
+            color: var(--red);
+            margin-top: 5px;
+        }
+
+        /* =========================================================
+           GET INVOLVED
+        ========================================================= */
+
+        .involved-section {
+            padding: 70px 20px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #071222,
+                    #123757
+                );
+
+            color: var(--white);
+        }
+
+        .involved-inner {
+            max-width: 1050px;
             margin: 0 auto;
+            text-align: center;
+        }
+
+        .involved-inner h2 {
+            font-size: 2.25rem;
+            margin-bottom: 13px;
+        }
+
+        .involved-inner > p {
+            max-width: 670px;
+            margin: 0 auto 30px;
+            color: #cbd5e1;
+        }
+
+        .involved-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 15px;
+        }
+
+        .involved-card {
+            padding: 25px 18px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.16);
+
+            border-radius: 8px;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            text-decoration: none;
+            color: var(--white);
+
+            transition: 0.2s;
+        }
+
+        .involved-card:hover {
+            background:
+                rgba(255,255,255,0.1);
+
+            transform: translateY(-3px);
+        }
+
+        .involved-card i {
+            display: block;
+
+            color: var(--gold);
+
+            font-size: 1.5rem;
+            margin-bottom: 11px;
+        }
+
+        .involved-card strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .involved-card span {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns:
+                minmax(0, 0.7fr)
+                minmax(0, 1.3fr);
+
+            gap: 50px;
+            align-items: start;
+        }
+
+        .contact-info h2 {
+            color: var(--text-heading);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--text-light);
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+
+            flex-shrink: 0;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #fef2f2;
+            color: var(--red);
+
+            border-radius: 50%;
+        }
+
+        .contact-item strong {
+            display: block;
+            color: var(--text-heading);
+            font-size: 0.9rem;
+        }
+
+        .contact-item a {
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .contact-form {
+            padding: 30px;
+
+            background: var(--white);
+
+            border: 1px solid var(--border);
+            border-radius: 10px;
+
+            box-shadow: var(--shadow);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
         }
 
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 16px;
         }
 
         .form-group label {
             display: block;
-            margin-bottom: 5px;
-            font-weight: 600;
+
+            margin-bottom: 6px;
+
+            color: var(--text-heading);
+
+            font-size: 0.86rem;
+            font-weight: 750;
         }
 
-        .form-group input, .form-group textarea {
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid var(--border-color);
+
+            padding: 12px 13px;
+
+            border: 1px solid #cbd5e1;
             border-radius: 6px;
+
+            background: var(--white);
+            color: var(--text-heading);
+
+            font: inherit;
+            font-size: 0.93rem;
+
+            outline: none;
+
+            transition: 0.2s;
         }
 
-        .btn {
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--navy-light);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(21, 58, 96, 0.08);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 130px;
+        }
+
+        .form-btn {
+            width: 100%;
+
             background: var(--navy-dark);
-            color: white;
-            padding: 12px;
+            color: var(--white);
+
+            padding: 13px;
+
             border: none;
             border-radius: 6px;
+
+            font-size: 0.96rem;
+            font-weight: 800;
+
             cursor: pointer;
-            font-size: 1rem;
-            width: 100%;
-            font-weight: 700;
+            transition: 0.2s;
         }
 
-        /* Footer */
+        .form-btn:hover {
+            background: var(--red);
+        }
+
+        .form-note {
+            margin-top: 10px;
+
+            color: var(--text-light);
+
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
         footer {
             background: var(--navy-dark);
-            color: #94a3b8;
-            text-align: center;
-            padding: 25px 20px;
-            font-size: 0.85rem;
+            color: #cbd5e1;
         }
 
-        /* Responsive Mobile View */
-        @media (max-width: 900px) {
-            .nav-links {
+        .footer-main {
+            max-width: 1200px;
+            margin: 0 auto;
+
+            padding: 48px 22px 35px;
+
+            display: grid;
+
+            grid-template-columns:
+                1.5fr 0.8fr 0.9fr;
+
+            gap: 50px;
+        }
+
+        .footer-brand h3 {
+            color: var(--white);
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            max-width: 400px;
+
+            color: #94a3b8;
+
+            font-size: 0.88rem;
+        }
+
+        .footer-column h4 {
+            color: var(--white);
+            margin-bottom: 13px;
+        }
+
+        .footer-column a {
+            display: block;
+
+            margin-bottom: 8px;
+
+            color: #cbd5e1;
+
+            text-decoration: none;
+            font-size: 0.87rem;
+
+            transition: 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: var(--gold);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.18);
+
+            border-radius: 50%;
+        }
+
+        .footer-bottom {
+            padding: 17px 20px;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.1);
+
+            text-align: center;
+
+            color: #64748b;
+
+            font-size: 0.78rem;
+        }
+
+        /* =========================================================
+           RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 950px) {
+
+            .desktop-nav {
                 display: none;
             }
+
             .hamburger {
                 display: block;
             }
-            .top-bar {
-                padding: 6px 12px;
-                font-size: 0.78rem;
-            }
-            .top-bar-phone {
-                font-size: 0.78rem;
-            }
+
             .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                padding:
+                    75px 22px
+                    35px;
+            }
+
+            .hero-message {
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-points,
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-photo-wrapper {
+                min-height: 400px;
+            }
+
+            .candidate-photo {
+                max-height: 430px;
+            }
+
+            .why-grid,
+            .about-grid,
+            .ward-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .priority-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .cta-bar-inner {
                 flex-direction: column;
                 text-align: center;
-                min-height: auto;
             }
-            .hero-left {
-                padding: 45px 15px 15px 15px;
-            }
-            .candidate-title-name {
-                font-size: 1.8rem;
-            }
-            .candidate-title-last {
-                font-size: 2.4rem;
-            }
-            .candidate-ward {
-                font-size: 1.1rem;
-            }
-            .hero-right {
-                width: 100%;
-                align-items: center;
-            }
-            .slogan-badge {
-                position: relative;
-                border-left: none;
-                border-top: 4px solid var(--gold-text);
-                font-size: 1rem;
-                padding: 12px 10px;
-            }
-            .cta-bar {
-                font-size: 1.3rem;
+
+            .footer-main {
+                grid-template-columns:
+                    1fr 1fr;
             }
         }
+
+        @media (max-width: 650px) {
+
+            .top-bar-inner {
+                padding:
+                    7px 12px;
+            }
+
+            .phone-link {
+                font-size: 0.74rem;
+            }
+
+            .phone-text-long {
+                display: none;
+            }
+
+            .header-container {
+                min-height: 65px;
+                padding:
+                    8px 14px;
+            }
+
+            .logo-first {
+                font-size: 0.78rem;
+            }
+
+            .logo-last {
+                font-size: 0.93rem;
+            }
+
+            .logo-sub {
+                font-size: 0.58rem;
+            }
+
+            .red-ribbon {
+                font-size: 1rem;
+
+                padding:
+                    8px 35px
+                    8px 17px;
+            }
+
+            .candidate-first-name {
+                font-size: 2rem;
+            }
+
+            .candidate-last-name {
+                font-size: 2.45rem;
+            }
+
+            .candidate-position {
+                font-size: 1.08rem;
+            }
+
+            .hero-message {
+                font-size: 0.94rem;
+            }
+
+            .hero-photo-wrapper {
+                min-height: auto;
+            }
+
+            .candidate-photo {
+                max-width: 350px;
+            }
+
+            .slogan-badge {
+                position: relative;
+                font-size: 0.88rem;
+            }
+
+            .cta-bar-actions {
+                width: 100%;
+                flex-direction: column;
+            }
+
+            .cta-small {
+                width: 100%;
+            }
+
+            .section {
+                padding: 55px 0;
+            }
+
+            .why-highlight {
+                padding: 28px;
+            }
+
+            .about-values {
+                grid-template-columns: 1fr;
+            }
+
+            .priority-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .involved-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-form {
+                padding: 22px 17px;
+            }
+
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
     </style>
 </head>
+
+
 <body>
 
-    <!-- STICKY HEADER GROUP -->
-    <div class="sticky-wrapper">
-        <div class="top-bar">
-            <a href="tel:6472890583" class="top-bar-phone">
-                <i class="fas fa-phone-alt" style="color: var(--red-tag);"></i> Here to Listen & Act: 647-289-0583
-            </a>
-            <div class="top-bar-socials">
-                <a href="https://www.facebook.com/share/18B3d68S9x/" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
+<!-- =============================================================
+     STICKY NAVIGATION
+============================================================= -->
 
-        <header>
-            <div class="header-container">
-                <a href="#" class="logo-text">
-                    Hamidreza KHEIRKHAH GHEHI
-                    <span class="logo-sub">For Ward 2 Councillor</span>
+<div class="sticky-wrapper">
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+
+        <div class="top-bar-inner">
+
+            <a
+                href="tel:+16472890583"
+                class="phone-link"
+            >
+                <i class="fa-solid fa-phone"></i>
+
+                <span class="phone-text-long">
+                    Have a Ward 2 concern?
+                </span>
+
+                647-289-0583
+            </a>
+
+
+            <div class="social-links">
+
+                <a
+                    href="https://www.facebook.com/share/18B3d68S9x/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
                 </a>
 
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#priorities">Priorities</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                <a
+                    href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a
+                    href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                >
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- MAIN HEADER -->
+
+    <header>
+
+        <div class="header-container">
+
+            <a href="#home" class="logo">
+
+                <span class="logo-first">
+                    HAMIDREZA
+                </span>
+
+                <span class="logo-last">
+                    KHEIRKHAH GHEHI
+                </span>
+
+                <span class="logo-sub">
+                    Candidate for Ward 2 Councillor
+                </span>
+
+            </a>
+
+
+            <ul class="desktop-nav">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#priorities">
+                        Priorities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#ward2">
+                        Ward 2
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="#contact"
+                        class="header-cta"
+                    >
+                        Get Involved
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <button
+                class="hamburger"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+            >
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </div>
+
+
+        <!-- MOBILE MENU -->
+
+        <nav
+            class="mobile-nav"
+            id="mobileMenu"
+        >
+
+            <ul>
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        Meet Hamidreza
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#priorities">
+                        Priorities
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#ward2">
+                        Ward 2
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#get-involved">
+                        Get Involved
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+</div>
+
+
+<!-- =============================================================
+     HERO
+============================================================= -->
+
+<section
+    class="hero-banner"
+    id="home"
+>
+
+    <div class="red-ribbon">
+        ELECT
+    </div>
+
+
+    <div class="hero-grid">
+
+        <div class="hero-content">
+
+            <div class="hero-eyebrow">
+                A Strong Voice for Ward 2
+            </div>
+
+
+            <h1>
+
+                <span class="candidate-first-name">
+                    Hamidreza
+                </span>
+
+                <br>
+
+                <span class="candidate-last-name">
+                    KHEIRKHAH GHEHI
+                </span>
+
+            </h1>
+
+
+            <div class="candidate-position">
+                Candidate for Ward 2 Councillor
+            </div>
+
+
+            <p class="hero-message">
+                Working for safer neighbourhoods,
+                responsible growth, accountable
+                municipal government, and a stronger
+                voice for Ward 2 residents at City Hall.
+            </p>
+
+
+            <div class="hero-points">
+
+                <span class="hero-point">
+                    Safe Neighbourhoods
+                </span>
+
+                <span class="hero-point">
+                    Responsible Growth
+                </span>
+
+                <span class="hero-point">
+                    Accountable City Hall
+                </span>
+
+            </div>
+
+
+            <div class="hero-actions">
+
+                <a
+                    href="#contact"
+                    class="btn btn-red"
+                >
+                    <i class="fa-solid fa-sign-hanging"></i>
+
+                    Request a Lawn Sign
+                </a>
+
+
+                <a
+                    href="#about"
+                    class="btn btn-outline"
+                >
+                    Meet Hamidreza
+
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-photo-wrapper">
+
+            <img
+                src="Main.png"
+                alt="Hamidreza Kheirkhah Ghehi, candidate for Ward 2 Councillor in Richmond Hill"
+                class="candidate-photo"
+            >
+
+            <div class="slogan-badge">
+                For a Stronger,
+                Transparent Richmond Hill
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     ACTION BAR
+============================================================= -->
+
+<section class="cta-bar">
+
+    <div class="cta-bar-inner">
+
+        <div class="cta-bar-text">
+
+            <strong>
+                Help Build a Better Ward 2
+            </strong>
+
+            <span>
+                Join the campaign and make your
+                voice heard.
+            </span>
+
+        </div>
+
+
+        <div class="cta-bar-actions">
+
+            <a
+                href="#contact"
+                class="cta-small"
+            >
+                Request a Lawn Sign
+            </a>
+
+            <a
+                href="#contact"
+                class="cta-small"
+            >
+                Volunteer
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     WHY I AM RUNNING
+============================================================= -->
+
+<section class="section section-white">
+
+    <div class="container">
+
+        <div class="why-grid">
+
+            <div class="why-highlight">
+
+                <i class="fa-solid fa-landmark"></i>
+
+                <h3>
+                    Your Voice.
+                    <br>
+                    Your Community.
+                    <br>
+                    Your City.
+                </h3>
+
+                <p>
+                    Local government should listen,
+                    communicate clearly, and make
+                    decisions with residents —
+                    not simply for them.
+                </p>
+
+            </div>
+
+
+            <div class="why-copy">
+
+                <div class="section-label">
+                    My Commitment
+                </div>
+
+                <h2>
+                    Why I’m Running
+                </h2>
+
+
+                <p>
+                    Richmond Hill is growing, and
+                    Ward 2 deserves a strong,
+                    accessible and accountable voice
+                    at City Hall.
+                </p>
+
+
+                <p>
+                    I am running to help protect the
+                    quality of our neighbourhoods,
+                    address traffic and safety
+                    concerns, encourage responsible
+                    development, and ensure municipal
+                    tax dollars are managed carefully.
+                </p>
+
+
+                <p>
+                    Most importantly, residents should
+                    feel heard before important
+                    decisions affecting their
+                    neighbourhoods are made.
+                </p>
+
+
+                <div class="quote">
+                    “Good local government starts
+                    by listening to the people it
+                    serves.”
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     ABOUT
+============================================================= -->
+
+<section
+    class="section section-soft"
+    id="about"
+>
+
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div class="about-photo-card">
+
+                <img
+                    src="Main.png"
+                    alt="Hamidreza Kheirkhah Ghehi"
+                >
+
+            </div>
+
+
+            <div class="about-content">
+
+                <div class="section-label">
+                    Meet the Candidate
+                </div>
+
+                <h2>
+                    Meet Hamidreza
+                </h2>
+
+
+                <p>
+                    Hamidreza Kheirkhah Ghehi is
+                    committed to serving Richmond Hill
+                    residents through responsible,
+                    transparent and community-focused
+                    municipal leadership.
+                </p>
+
+
+                <p>
+                    His campaign is built around a
+                    simple principle: residents deserve
+                    to know how decisions are made,
+                    how their tax dollars are spent,
+                    and how growth will affect their
+                    neighbourhoods.
+                </p>
+
+
+                <p>
+                    As a candidate for Ward 2
+                    Councillor, Hamidreza wants to
+                    bring residents, businesses,
+                    community organizations and the
+                    City together to find practical
+                    solutions to local challenges.
+                </p>
+
+
+                <div class="about-values">
+
+                    <div class="about-value">
+
+                        <i class="fa-solid fa-ear-listen"></i>
+
+                        <span>
+                            Listen
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-value">
+
+                        <i class="fa-solid fa-handshake"></i>
+
+                        <span>
+                            Collaborate
+                        </span>
+
+                    </div>
+
+
+                    <div class="about-value">
+
+                        <i class="fa-solid fa-check-double"></i>
+
+                        <span>
+                            Deliver
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     PRIORITIES
+============================================================= -->
+
+<section
+    class="section section-white"
+    id="priorities"
+>
+
+    <div class="container">
+
+        <div class="section-intro">
+
+            <div class="section-label">
+                Working for Ward 2
+            </div>
+
+            <h2 class="section-title">
+                Priorities for Our Community
+            </h2>
+
+            <p class="section-description">
+                Practical local priorities focused
+                on protecting neighbourhood quality,
+                improving daily life, and ensuring
+                residents receive value from their
+                municipal government.
+            </p>
+
+        </div>
+
+
+        <div class="priority-grid">
+
+
+            <!-- Priority 1 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-city"></i>
+                </div>
+
+                <h3>
+                    Responsible Growth
+                </h3>
+
+                <p>
+                    Support responsible development
+                    while protecting established
+                    neighbourhoods and ensuring roads,
+                    parks, transit and public services
+                    keep pace with population growth.
+                </p>
+
+            </article>
+
+
+            <!-- Priority 2 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-traffic-light"></i>
+                </div>
+
+                <h3>
+                    Traffic & Road Safety
+                </h3>
+
+                <p>
+                    Advocate for safer residential
+                    streets, improved traffic
+                    management and practical solutions
+                    to congestion affecting Ward 2
+                    families.
+                </p>
+
+            </article>
+
+
+            <!-- Priority 3 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+
+                <h3>
+                    Safe Neighbourhoods
+                </h3>
+
+                <p>
+                    Support community safety
+                    initiatives and stronger
+                    coordination between residents,
+                    municipal services and community
+                    partners.
+                </p>
+
+            </article>
+
+
+            <!-- Priority 4 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-coins"></i>
+                </div>
+
+                <h3>
+                    Responsible Tax Spending
+                </h3>
+
+                <p>
+                    Promote fiscal discipline,
+                    scrutinize municipal spending and
+                    focus tax dollars on services and
+                    infrastructure that deliver real
+                    value to residents.
+                </p>
+
+            </article>
+
+
+            <!-- Priority 5 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-tree"></i>
+                </div>
+
+                <h3>
+                    Parks & Community Spaces
+                </h3>
+
+                <p>
+                    Protect and improve parks,
+                    recreation facilities and public
+                    spaces that contribute to healthy,
+                    connected and family-friendly
+                    neighbourhoods.
+                </p>
+
+            </article>
+
+
+            <!-- Priority 6 -->
+
+            <article class="priority-card">
+
+                <div class="priority-icon">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+
+                <h3>
+                    Transparent City Hall
+                </h3>
+
+                <p>
+                    Support clear communication,
+                    accessible representation and
+                    transparent decision-making so
+                    residents understand how and why
+                    important decisions are made.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     WARD 2
+============================================================= -->
+
+<section
+    class="section section-soft"
+    id="ward2"
+>
+
+    <div class="container">
+
+        <div class="ward-grid">
+
+            <div class="ward-visual">
+
+                <i class="fa-solid fa-location-dot"></i>
+
+                <div class="ward-number">
+                    WARD 2
+                </div>
+
+                <p>
+                    Richmond Hill, Ontario
+                </p>
+
+            </div>
+
+
+            <div class="ward-content">
+
+                <div class="section-label">
+                    Our Community
+                </div>
+
+                <h2>
+                    A Strong Voice for Ward 2
+                </h2>
+
+
+                <p>
+                    Ward 2 is home to diverse
+                    neighbourhoods, families,
+                    businesses and community
+                    organizations that all contribute
+                    to Richmond Hill’s success.
+                </p>
+
+
+                <p>
+                    As our city grows, Ward 2 needs
+                    representation focused on both
+                    today’s concerns and the
+                    long-term quality of our
+                    neighbourhoods.
+                </p>
+
+
+                <ul class="ward-list">
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Listening to neighbourhood
+                            concerns
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Protecting community
+                            character
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Planning responsibly for
+                            future growth
+                        </span>
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-check"></i>
+
+                        <span>
+                            Improving communication
+                            between City Hall and
+                            residents
+                        </span>
+                    </li>
+
                 </ul>
 
-                <div class="hamburger">
-                    <i class="fas fa-bars"></i>
-                </div>
             </div>
-        </header>
-    </div>
 
-    <!-- Hero Banner -->
-    <section class="hero-banner" id="home">
-        <div class="red-ribbon">ELECT</div>
-        
-        <div class="hero-grid">
-            <div class="hero-left">
-                <div class="candidate-title-name">Hamidreza</div>
-                <div class="candidate-title-last">KHEIRKHAH GHEHI</div>
-                <div class="candidate-ward">For Ward 2 Councillor</div>
-            </div>
-            
-            <div class="hero-right">
-                <img src="Main.png" alt="Hamidreza Kheirkhah Ghehi" class="candidate-photo">
-                <div class="slogan-badge">For a Stronger, Transparent Richmond Hill</div>
-            </div>
         </div>
-    </section>
 
-    <!-- Call to Action Bar -->
-    <div class="cta-bar">
-        Take Action Toward a Better Ward 2
     </div>
 
-    <!-- Priorities Section -->
-    <div class="main-container" id="priorities">
-        <h2 class="section-title">Key Campaign Priorities</h2>
-        <div class="grid">
-            <div class="card">
-                <h3>Smart Growth & Infrastructure</h3>
-                <p>Managing urban development while preserving neighborhood character and upgrading Ward 2 infrastructure.</p>
-            </div>
-            <div class="card">
-                <h3>Community Safety & Traffic</h3>
-                <p>Enhancing road safety in residential areas, managing traffic congestion, and supporting local neighborhood watch programs.</p>
-            </div>
-            <div class="card">
-                <h3>Fiscal Discipline & Accountability</h3>
-                <p>Ensuring responsible spending of municipal tax dollars and transparent decision-making for our constituents.</p>
-            </div>
+</section>
+
+
+<!-- =============================================================
+     GET INVOLVED
+============================================================= -->
+
+<section
+    class="involved-section"
+    id="get-involved"
+>
+
+    <div class="involved-inner">
+
+        <div
+            class="section-label"
+            style="color: var(--gold);"
+        >
+            Join the Campaign
         </div>
+
+
+        <h2>
+            Together, We Can Strengthen Ward 2
+        </h2>
+
+
+        <p>
+            A strong local campaign starts with
+            residents. There are many ways you can
+            participate and make your voice heard.
+        </p>
+
+
+        <div class="involved-grid">
+
+            <a
+                href="#contact"
+                class="involved-card"
+            >
+
+                <i class="fa-solid fa-sign-hanging"></i>
+
+                <strong>
+                    Request a Lawn Sign
+                </strong>
+
+                <span>
+                    Show your support in the
+                    neighbourhood.
+                </span>
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="involved-card"
+            >
+
+                <i class="fa-solid fa-people-group"></i>
+
+                <strong>
+                    Volunteer
+                </strong>
+
+                <span>
+                    Help us connect with Ward 2
+                    residents.
+                </span>
+
+            </a>
+
+
+            <a
+                href="#contact"
+                class="involved-card"
+            >
+
+                <i class="fa-solid fa-comments"></i>
+
+                <strong>
+                    Share Your Concerns
+                </strong>
+
+                <span>
+                    Tell us what matters in your
+                    neighbourhood.
+                </span>
+
+            </a>
+
+        </div>
+
     </div>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <div class="contact-container">
-            <h2 class="section-title">Connect & Get Involved</h2>
-            <form action="#">
-                <div class="form-group">
-                    <label>Full Name</label>
-                    <input type="text" required placeholder="Your Name">
+</section>
+
+
+<!-- =============================================================
+     CONTACT
+============================================================= -->
+
+<section
+    class="section section-white"
+    id="contact"
+>
+
+    <div class="container">
+
+        <div class="contact-grid">
+
+
+            <!-- CONTACT INFO -->
+
+            <div class="contact-info">
+
+                <div class="section-label">
+                    Let’s Connect
                 </div>
-                <div class="form-group">
-                    <label>Email Address / Phone Number</label>
-                    <input type="text" required placeholder="your.email@example.com">
+
+                <h2>
+                    We Want to Hear From You
+                </h2>
+
+                <p>
+                    Have a Ward 2 concern, campaign
+                    question, or want to get involved?
+                    Reach out directly.
+                </p>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Phone
+                        </strong>
+
+                        <a href="tel:+16472890583">
+                            647-289-0583
+                        </a>
+
+                    </div>
+
                 </div>
-                <div class="form-group">
-                    <label>Message / Request a Lawn Sign</label>
-                    <textarea rows="5" required placeholder="How can we work together for Ward 2?"></textarea>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-instagram"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Instagram
+                        </strong>
+
+                        <a
+                            href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            @hamidghehi
+                        </a>
+
+                    </div>
+
                 </div>
-                <button type="submit" class="btn">Send Message</button>
+
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            YouTube
+                        </strong>
+
+                        <a
+                            href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Hamidreza Talks
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <form
+                class="contact-form"
+                id="campaignForm"
+            >
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="fullName">
+                            Full Name *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="fullName"
+                            name="fullName"
+                            placeholder="Your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="contactInfo">
+                            Email or Phone *
+                        </label>
+
+                        <input
+                            type="text"
+                            id="contactInfo"
+                            name="contactInfo"
+                            placeholder="Email or phone number"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="interest">
+                        How would you like to connect?
+                    </label>
+
+                    <select
+                        id="interest"
+                        name="interest"
+                    >
+
+                        <option value="">
+                            Please select
+                        </option>
+
+                        <option value="lawn-sign">
+                            Request a Lawn Sign
+                        </option>
+
+                        <option value="volunteer">
+                            Volunteer
+                        </option>
+
+                        <option value="community-concern">
+                            Share a Ward 2 Concern
+                        </option>
+
+                        <option value="campaign-update">
+                            Receive Campaign Updates
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="message">
+                        Message *
+                    </label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="How can we help, or what would you like Hamidreza to know?"
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="form-btn"
+                >
+                    Send Message
+                </button>
+
+
+                <p
+                    class="form-note"
+                    id="formStatus"
+                >
+                    Your information will only be used
+                    for campaign-related communication.
+                </p>
+
             </form>
-        </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Hamidreza Kheirkhah Ghehi Campaign — Ward 2 Richmond Hill. All Rights Reserved.</p>
-    </footer>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =============================================================
+     FOOTER
+============================================================= -->
+
+<footer>
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <h3>
+                Hamidreza Kheirkhah Ghehi
+            </h3>
+
+            <p>
+                Candidate for Ward 2 Councillor,
+                Richmond Hill. Working for safer
+                neighbourhoods, responsible growth,
+                accountability and stronger local
+                representation.
+            </p>
+
+
+            <div class="footer-socials">
+
+                <a
+                    href="https://www.facebook.com/share/18B3d68S9x/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Facebook"
+                >
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+
+                <a
+                    href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                >
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+
+                <a
+                    href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="YouTube"
+                >
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Explore
+            </h4>
+
+            <a href="#home">
+                Home
+            </a>
+
+            <a href="#about">
+                About Hamidreza
+            </a>
+
+            <a href="#priorities">
+                Priorities
+            </a>
+
+            <a href="#ward2">
+                Ward 2
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h4>
+                Campaign
+            </h4>
+
+            <a href="#contact">
+                Request a Lawn Sign
+            </a>
+
+            <a href="#contact">
+                Volunteer
+            </a>
+
+            <a href="#contact">
+                Share a Concern
+            </a>
+
+            <a href="tel:+16472890583">
+                647-289-0583
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        &copy;
+        <span id="year"></span>
+
+        Hamidreza Kheirkhah Ghehi Campaign —
+        Ward 2 Richmond Hill.
+        All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- =============================================================
+     JAVASCRIPT
+============================================================= -->
+
+<script>
+
+    /* =========================================================
+       MOBILE MENU
+    ========================================================= */
+
+    const menuButton =
+        document.getElementById("menuButton");
+
+    const mobileMenu =
+        document.getElementById("mobileMenu");
+
+
+    menuButton.addEventListener(
+        "click",
+        function () {
+
+            mobileMenu.classList.toggle(
+                "active"
+            );
+
+            const isOpen =
+                mobileMenu.classList.contains(
+                    "active"
+                );
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            menuButton.innerHTML =
+                isOpen
+                    ? '<i class="fa-solid fa-xmark"></i>'
+                    : '<i class="fa-solid fa-bars"></i>';
+
+        }
+    );
+
+
+    /* Close mobile menu after clicking a link */
+
+    const mobileLinks =
+        mobileMenu.querySelectorAll("a");
+
+
+    mobileLinks.forEach(
+        function (link) {
+
+            link.addEventListener(
+                "click",
+                function () {
+
+                    mobileMenu.classList.remove(
+                        "active"
+                    );
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                    menuButton.innerHTML =
+                        '<i class="fa-solid fa-bars"></i>';
+
+                }
+            );
+
+        }
+    );
+
+
+    /* =========================================================
+       CURRENT YEAR
+    ========================================================= */
+
+    document.getElementById(
+        "year"
+    ).textContent =
+        new Date().getFullYear();
+
+
+    /* =========================================================
+       CONTACT FORM DEMO
+    ========================================================= */
+
+    const campaignForm =
+        document.getElementById(
+            "campaignForm"
+        );
+
+    const formStatus =
+        document.getElementById(
+            "formStatus"
+        );
+
+
+    campaignForm.addEventListener(
+        "submit",
+        function (event) {
+
+            event.preventDefault();
+
+            formStatus.textContent =
+                "Thank you. The form design is ready. Connect this form to your email service before publishing.";
+
+            formStatus.style.color =
+                "#15803d";
+
+        }
+    );
+
+</script>
+
 
 </body>
 </html>
