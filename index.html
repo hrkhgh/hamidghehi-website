@@ -13,17 +13,12 @@
         content="Hamidreza Kheirkhah Ghehi is a candidate for Ward 2 Councillor in Richmond Hill. Learn about his priorities, campaign, and vision for Ward 2."
     >
 
-    <!-- Font Awesome -->
     <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     >
 
     <style>
-        /* =========================================================
-           GLOBAL VARIABLES
-        ========================================================= */
-
         :root {
             --navy-dark: #071222;
             --navy-blue: #0b1e36;
@@ -123,7 +118,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-
             gap: 20px;
         }
 
@@ -192,18 +186,21 @@
             line-height: 1.05;
         }
 
+        /* CHANGED */
         .logo-first {
             display: block;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 400;
             letter-spacing: 1px;
         }
 
+        /* CHANGED */
         .logo-last {
             display: block;
-            font-size: 1.2rem;
-            font-weight: 900;
-            letter-spacing: 0.4px;
+            font-size: 1rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-top: 3px;
         }
 
         .logo-sub {
@@ -313,12 +310,14 @@
             content: "";
             position: absolute;
             inset: 0;
+
             background:
                 linear-gradient(
                     90deg,
                     rgba(255,255,255,0.015),
                     transparent
                 );
+
             pointer-events: none;
         }
 
@@ -346,6 +345,7 @@
                 );
         }
 
+        /* CHANGED */
         .hero-grid {
             max-width: 1200px;
             min-height: 520px;
@@ -354,7 +354,7 @@
             display: grid;
             grid-template-columns: 1.08fr 0.92fr;
 
-            align-items: center;
+            align-items: stretch;
         }
 
         .hero-content {
@@ -492,26 +492,30 @@
             color: var(--navy-dark);
         }
 
+        /* CHANGED */
         .hero-photo-wrapper {
             height: 100%;
             min-height: 520px;
 
             display: flex;
             justify-content: center;
-            align-items: flex-end;
+            align-items: flex-start;
 
             position: relative;
+
+            padding-top: 75px;
         }
 
+        /* CHANGED */
         .candidate-photo {
             display: block;
 
             width: 100%;
             max-width: 490px;
-            max-height: 520px;
+            max-height: 445px;
 
             object-fit: contain;
-            object-position: center bottom;
+            object-position: center top;
 
             position: relative;
             z-index: 2;
@@ -1315,6 +1319,7 @@
 
             .hero-photo-wrapper {
                 min-height: 400px;
+                padding-top: 30px;
             }
 
             .candidate-photo {
@@ -1370,7 +1375,7 @@
             }
 
             .logo-last {
-                font-size: 0.93rem;
+                font-size: 0.78rem;
             }
 
             .logo-sub {
@@ -1403,6 +1408,7 @@
 
             .hero-photo-wrapper {
                 min-height: auto;
+                padding-top: 20px;
             }
 
             .candidate-photo {
@@ -1463,13 +1469,8 @@
 
 <body>
 
-<!-- =============================================================
-     STICKY NAVIGATION
-============================================================= -->
-
 <div class="sticky-wrapper">
 
-    <!-- TOP BAR -->
     <div class="top-bar">
 
         <div class="top-bar-inner">
@@ -1524,8 +1525,6 @@
     </div>
 
 
-    <!-- MAIN HEADER -->
-
     <header>
 
         <div class="header-container">
@@ -1549,35 +1548,11 @@
 
             <ul class="desktop-nav">
 
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#about">
-                        About
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#priorities">
-                        Priorities
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#ward2">
-                        Ward 2
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#ward2">Ward 2</a></li>
+                <li><a href="#contact">Contact</a></li>
 
                 <li>
                     <a
@@ -1603,8 +1578,6 @@
         </div>
 
 
-        <!-- MOBILE MENU -->
-
         <nav
             class="mobile-nav"
             id="mobileMenu"
@@ -1612,41 +1585,12 @@
 
             <ul>
 
-                <li>
-                    <a href="#home">
-                        Home
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#about">
-                        Meet Hamidreza
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#priorities">
-                        Priorities
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#ward2">
-                        Ward 2
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#get-involved">
-                        Get Involved
-                    </a>
-                </li>
-
-                <li>
-                    <a href="#contact">
-                        Contact
-                    </a>
-                </li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Meet Hamidreza</a></li>
+                <li><a href="#priorities">Priorities</a></li>
+                <li><a href="#ward2">Ward 2</a></li>
+                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Contact</a></li>
 
             </ul>
 
@@ -1656,10 +1600,6 @@
 
 </div>
 
-
-<!-- =============================================================
-     HERO
-============================================================= -->
 
 <section
     class="hero-banner"
@@ -1732,7 +1672,6 @@
                     class="btn btn-red"
                 >
                     <i class="fa-solid fa-sign-hanging"></i>
-
                     Request a Lawn Sign
                 </a>
 
@@ -1742,7 +1681,6 @@
                     class="btn btn-outline"
                 >
                     Meet Hamidreza
-
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
 
@@ -1771,10 +1709,6 @@
 </section>
 
 
-<!-- =============================================================
-     ACTION BAR
-============================================================= -->
-
 <section class="cta-bar">
 
     <div class="cta-bar-inner">
@@ -1786,8 +1720,7 @@
             </strong>
 
             <span>
-                Join the campaign and make your
-                voice heard.
+                Join the campaign and make your voice heard.
             </span>
 
         </div>
@@ -1795,17 +1728,11 @@
 
         <div class="cta-bar-actions">
 
-            <a
-                href="#contact"
-                class="cta-small"
-            >
+            <a href="#contact" class="cta-small">
                 Request a Lawn Sign
             </a>
 
-            <a
-                href="#contact"
-                class="cta-small"
-            >
+            <a href="#contact" class="cta-small">
                 Volunteer
             </a>
 
@@ -1815,10 +1742,6 @@
 
 </section>
 
-
-<!-- =============================================================
-     WHY I AM RUNNING
-============================================================= -->
 
 <section class="section section-white">
 
@@ -1831,10 +1754,8 @@
                 <i class="fa-solid fa-landmark"></i>
 
                 <h3>
-                    Your Voice.
-                    <br>
-                    Your Community.
-                    <br>
+                    Your Voice.<br>
+                    Your Community.<br>
                     Your City.
                 </h3>
 
@@ -1858,14 +1779,12 @@
                     Why I’m Running
                 </h2>
 
-
                 <p>
                     Richmond Hill is growing, and
                     Ward 2 deserves a strong,
                     accessible and accountable voice
                     at City Hall.
                 </p>
-
 
                 <p>
                     I am running to help protect the
@@ -1876,14 +1795,12 @@
                     tax dollars are managed carefully.
                 </p>
 
-
                 <p>
                     Most importantly, residents should
                     feel heard before important
                     decisions affecting their
                     neighbourhoods are made.
                 </p>
-
 
                 <div class="quote">
                     “Good local government starts
@@ -1899,10 +1816,6 @@
 
 </section>
 
-
-<!-- =============================================================
-     ABOUT
-============================================================= -->
 
 <section
     class="section section-soft"
@@ -1933,7 +1846,6 @@
                     Meet Hamidreza
                 </h2>
 
-
                 <p>
                     Hamidreza Kheirkhah Ghehi is
                     committed to serving Richmond Hill
@@ -1941,7 +1853,6 @@
                     transparent and community-focused
                     municipal leadership.
                 </p>
-
 
                 <p>
                     His campaign is built around a
@@ -1951,7 +1862,6 @@
                     and how growth will affect their
                     neighbourhoods.
                 </p>
-
 
                 <p>
                     As a candidate for Ward 2
@@ -1966,35 +1876,18 @@
                 <div class="about-values">
 
                     <div class="about-value">
-
                         <i class="fa-solid fa-ear-listen"></i>
-
-                        <span>
-                            Listen
-                        </span>
-
+                        <span>Listen</span>
                     </div>
 
-
                     <div class="about-value">
-
                         <i class="fa-solid fa-handshake"></i>
-
-                        <span>
-                            Collaborate
-                        </span>
-
+                        <span>Collaborate</span>
                     </div>
 
-
                     <div class="about-value">
-
                         <i class="fa-solid fa-check-double"></i>
-
-                        <span>
-                            Deliver
-                        </span>
-
+                        <span>Deliver</span>
                     </div>
 
                 </div>
@@ -2007,10 +1900,6 @@
 
 </section>
 
-
-<!-- =============================================================
-     PRIORITIES
-============================================================= -->
 
 <section
     class="section section-white"
@@ -2042,9 +1931,6 @@
 
         <div class="priority-grid">
 
-
-            <!-- Priority 1 -->
-
             <article class="priority-card">
 
                 <div class="priority-icon">
@@ -2065,8 +1951,6 @@
 
             </article>
 
-
-            <!-- Priority 2 -->
 
             <article class="priority-card">
 
@@ -2089,8 +1973,6 @@
             </article>
 
 
-            <!-- Priority 3 -->
-
             <article class="priority-card">
 
                 <div class="priority-icon">
@@ -2111,8 +1993,6 @@
 
             </article>
 
-
-            <!-- Priority 4 -->
 
             <article class="priority-card">
 
@@ -2135,8 +2015,6 @@
             </article>
 
 
-            <!-- Priority 5 -->
-
             <article class="priority-card">
 
                 <div class="priority-icon">
@@ -2157,8 +2035,6 @@
 
             </article>
 
-
-            <!-- Priority 6 -->
 
             <article class="priority-card">
 
@@ -2186,10 +2062,6 @@
 
 </section>
 
-
-<!-- =============================================================
-     WARD 2
-============================================================= -->
 
 <section
     class="section section-soft"
@@ -2225,7 +2097,6 @@
                     A Strong Voice for Ward 2
                 </h2>
 
-
                 <p>
                     Ward 2 is home to diverse
                     neighbourhoods, families,
@@ -2233,7 +2104,6 @@
                     organizations that all contribute
                     to Richmond Hill’s success.
                 </p>
-
 
                 <p>
                     As our city grows, Ward 2 needs
@@ -2248,38 +2118,29 @@
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-
                         <span>
-                            Listening to neighbourhood
-                            concerns
+                            Listening to neighbourhood concerns
                         </span>
                     </li>
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-
                         <span>
-                            Protecting community
-                            character
+                            Protecting community character
                         </span>
                     </li>
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-
                         <span>
-                            Planning responsibly for
-                            future growth
+                            Planning responsibly for future growth
                         </span>
                     </li>
 
                     <li>
                         <i class="fa-solid fa-check"></i>
-
                         <span>
-                            Improving communication
-                            between City Hall and
-                            residents
+                            Improving communication between City Hall and residents
                         </span>
                     </li>
 
@@ -2293,10 +2154,6 @@
 
 </section>
 
-
-<!-- =============================================================
-     GET INVOLVED
-============================================================= -->
 
 <section
     class="involved-section"
@@ -2327,10 +2184,7 @@
 
         <div class="involved-grid">
 
-            <a
-                href="#contact"
-                class="involved-card"
-            >
+            <a href="#contact" class="involved-card">
 
                 <i class="fa-solid fa-sign-hanging"></i>
 
@@ -2339,17 +2193,13 @@
                 </strong>
 
                 <span>
-                    Show your support in the
-                    neighbourhood.
+                    Show your support in the neighbourhood.
                 </span>
 
             </a>
 
 
-            <a
-                href="#contact"
-                class="involved-card"
-            >
+            <a href="#contact" class="involved-card">
 
                 <i class="fa-solid fa-people-group"></i>
 
@@ -2358,17 +2208,13 @@
                 </strong>
 
                 <span>
-                    Help us connect with Ward 2
-                    residents.
+                    Help us connect with Ward 2 residents.
                 </span>
 
             </a>
 
 
-            <a
-                href="#contact"
-                class="involved-card"
-            >
+            <a href="#contact" class="involved-card">
 
                 <i class="fa-solid fa-comments"></i>
 
@@ -2377,8 +2223,7 @@
                 </strong>
 
                 <span>
-                    Tell us what matters in your
-                    neighbourhood.
+                    Tell us what matters in your neighbourhood.
                 </span>
 
             </a>
@@ -2390,10 +2235,6 @@
 </section>
 
 
-<!-- =============================================================
-     CONTACT
-============================================================= -->
-
 <section
     class="section section-white"
     id="contact"
@@ -2403,8 +2244,6 @@
 
         <div class="contact-grid">
 
-
-            <!-- CONTACT INFO -->
 
             <div class="contact-info">
 
@@ -2430,15 +2269,11 @@
                     </div>
 
                     <div>
-
-                        <strong>
-                            Phone
-                        </strong>
+                        <strong>Phone</strong>
 
                         <a href="tel:+16472890583">
                             647-289-0583
                         </a>
-
                     </div>
 
                 </div>
@@ -2451,10 +2286,7 @@
                     </div>
 
                     <div>
-
-                        <strong>
-                            Instagram
-                        </strong>
+                        <strong>Instagram</strong>
 
                         <a
                             href="https://www.instagram.com/hamidghehi?igsh=ejBmcDg4MHR3dXcw"
@@ -2463,7 +2295,6 @@
                         >
                             @hamidghehi
                         </a>
-
                     </div>
 
                 </div>
@@ -2476,10 +2307,7 @@
                     </div>
 
                     <div>
-
-                        <strong>
-                            YouTube
-                        </strong>
+                        <strong>YouTube</strong>
 
                         <a
                             href="https://youtube.com/@hamidrezatalks?si=QCzwwjO0tzrqCCHb"
@@ -2488,15 +2316,12 @@
                         >
                             Hamidreza Talks
                         </a>
-
                     </div>
 
                 </div>
 
             </div>
 
-
-            <!-- CONTACT FORM -->
 
             <form
                 class="contact-form"
@@ -2622,10 +2447,6 @@
 </section>
 
 
-<!-- =============================================================
-     FOOTER
-============================================================= -->
-
 <footer>
 
     <div class="footer-main">
@@ -2688,25 +2509,11 @@
                 Explore
             </h4>
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#about">
-                About Hamidreza
-            </a>
-
-            <a href="#priorities">
-                Priorities
-            </a>
-
-            <a href="#ward2">
-                Ward 2
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
+            <a href="#home">Home</a>
+            <a href="#about">About Hamidreza</a>
+            <a href="#priorities">Priorities</a>
+            <a href="#ward2">Ward 2</a>
+            <a href="#contact">Contact</a>
 
         </div>
 
@@ -2752,15 +2559,7 @@
 </footer>
 
 
-<!-- =============================================================
-     JAVASCRIPT
-============================================================= -->
-
 <script>
-
-    /* =========================================================
-       MOBILE MENU
-    ========================================================= */
 
     const menuButton =
         document.getElementById("menuButton");
@@ -2787,7 +2586,6 @@
                 isOpen
             );
 
-
             menuButton.innerHTML =
                 isOpen
                     ? '<i class="fa-solid fa-xmark"></i>'
@@ -2796,8 +2594,6 @@
         }
     );
 
-
-    /* Close mobile menu after clicking a link */
 
     const mobileLinks =
         mobileMenu.querySelectorAll("a");
@@ -2829,19 +2625,11 @@
     );
 
 
-    /* =========================================================
-       CURRENT YEAR
-    ========================================================= */
-
     document.getElementById(
         "year"
     ).textContent =
         new Date().getFullYear();
 
-
-    /* =========================================================
-       CONTACT FORM DEMO
-    ========================================================= */
 
     const campaignForm =
         document.getElementById(
