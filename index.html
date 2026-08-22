@@ -536,16 +536,6 @@
             transition: all 0.2s;
         }
 
-        .btn-red {
-            background: var(--red);
-            color: var(--white);
-        }
-
-        .btn-red:hover {
-            background: var(--red-hover);
-            transform: translateY(-2px);
-        }
-
         .btn-outline {
             border: 1px solid
                 rgba(255,255,255,0.55);
@@ -656,79 +646,6 @@
         .section-description {
             color: var(--text-light);
             font-size: 1rem;
-        }
-
-        /* =========================================================
-           WHY RUNNING
-        ========================================================= */
-
-        .why-grid {
-            display: grid;
-
-            grid-template-columns:
-                minmax(0, 0.8fr)
-                minmax(0, 1.2fr);
-
-            gap: 55px;
-            align-items: center;
-        }
-
-        .why-highlight {
-            min-height: 300px;
-
-            padding: 38px;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    var(--navy-dark),
-                    var(--navy-light)
-                );
-
-            color: var(--white);
-
-            border-radius: 12px;
-
-            box-shadow: var(--shadow);
-        }
-
-        .why-highlight i {
-            font-size: 2.2rem;
-            color: var(--gold);
-            margin-bottom: 20px;
-        }
-
-        .why-highlight h3 {
-            font-size: 1.8rem;
-            line-height: 1.25;
-            margin-bottom: 15px;
-        }
-
-        .why-highlight p {
-            color: #cbd5e1;
-        }
-
-        .why-copy h2 {
-            color: var(--text-heading);
-            font-size: 2rem;
-            margin-bottom: 18px;
-        }
-
-        .why-copy p {
-            margin-bottom: 15px;
-        }
-
-        .quote {
-            margin-top: 22px;
-            padding-left: 18px;
-            border-left: 4px solid var(--red);
-
-            color: var(--text-heading);
-            font-weight: 700;
         }
 
         /* =========================================================
@@ -954,93 +871,6 @@
         .ward-list i {
             color: var(--red);
             margin-top: 5px;
-        }
-
-        /* =========================================================
-           GET INVOLVED
-        ========================================================= */
-
-        .involved-section {
-            padding: 70px 20px;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #071222,
-                    #123757
-                );
-
-            color: var(--white);
-        }
-
-        .involved-inner {
-            max-width: 1050px;
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .involved-inner h2 {
-            font-size: 2.25rem;
-            margin-bottom: 13px;
-        }
-
-        .involved-inner > p {
-            max-width: 670px;
-            margin: 0 auto 30px;
-            color: #cbd5e1;
-        }
-
-        .involved-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 15px;
-        }
-
-        .involved-card {
-            padding: 25px 18px;
-
-            border:
-                1px solid
-                rgba(255,255,255,0.16);
-
-            border-radius: 8px;
-
-            background:
-                rgba(255,255,255,0.05);
-
-            text-decoration: none;
-            color: var(--white);
-
-            transition: 0.2s;
-        }
-
-        .involved-card:hover {
-            background:
-                rgba(255,255,255,0.1);
-
-            transform: translateY(-3px);
-        }
-
-        .involved-card i {
-            display: block;
-
-            color: var(--gold);
-
-            font-size: 1.5rem;
-            margin-bottom: 11px;
-        }
-
-        .involved-card strong {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .involved-card span {
-            color: #cbd5e1;
-            font-size: 0.85rem;
         }
 
         /* =========================================================
@@ -1341,7 +1171,6 @@
                 max-height: 430px;
             }
 
-            .why-grid,
             .about-grid,
             .ward-grid,
             .contact-grid {
@@ -1449,19 +1278,11 @@
                 padding: 55px 0;
             }
 
-            .why-highlight {
-                padding: 28px;
-            }
-
             .about-values {
                 grid-template-columns: 1fr;
             }
 
             .priority-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .involved-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1605,7 +1426,7 @@
                 <li><a href="#about">Meet Hamidreza</a></li>
                 <li><a href="#priorities">Priorities</a></li>
                 <li><a href="#ward2">Ward 2</a></li>
-                <li><a href="#get-involved">Get Involved</a></li>
+                <li><a href="#contact">Get Involved</a></li>
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
@@ -1728,80 +1549,6 @@
             <div class="slogan-badge">
                 For a Stronger,
                 Transparent Richmond Hill
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section class="section section-white">
-
-    <div class="container">
-
-        <div class="why-grid">
-
-            <div class="why-highlight">
-
-                <i class="fa-solid fa-landmark"></i>
-
-                <h3>
-                    Your Voice.<br>
-                    Your Community.<br>
-                    Your City.
-                </h3>
-
-                <p>
-                    Local government should listen,
-                    communicate clearly, and make
-                    decisions with residents —
-                    not simply for them.
-                </p>
-
-            </div>
-
-
-            <div class="why-copy">
-
-                <div class="section-label">
-                    My Commitment
-                </div>
-
-                <h2>
-                    Why I’m Running
-                </h2>
-
-                <p>
-                    Richmond Hill is growing, and
-                    Ward 2 deserves a strong,
-                    accessible and accountable voice
-                    at City Hall.
-                </p>
-
-                <p>
-                    I am running to help protect the
-                    quality of our neighbourhoods,
-                    address traffic and safety
-                    concerns, encourage responsible
-                    development, and ensure municipal
-                    tax dollars are managed carefully.
-                </p>
-
-                <p>
-                    Most importantly, residents should
-                    feel heard before important
-                    decisions affecting their
-                    neighbourhoods are made.
-                </p>
-
-                <div class="quote">
-                    “Good local government starts
-                    by listening to the people it
-                    serves.”
-                </div>
-
             </div>
 
         </div>
@@ -2141,86 +1888,6 @@
                 </ul>
 
             </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<section
-    class="involved-section"
-    id="get-involved"
->
-
-    <div class="involved-inner">
-
-        <div
-            class="section-label"
-            style="color: var(--gold);"
-        >
-            Join the Campaign
-        </div>
-
-
-        <h2>
-            Together, We Can Strengthen Ward 2
-        </h2>
-
-
-        <p>
-            A strong local campaign starts with
-            residents. There are many ways you can
-            participate and make your voice heard.
-        </p>
-
-
-        <div class="involved-grid">
-
-            <a href="#contact" class="involved-card">
-
-                <i class="fa-solid fa-sign-hanging"></i>
-
-                <strong>
-                    Request a Lawn Sign
-                </strong>
-
-                <span>
-                    Show your support in the neighbourhood.
-                </span>
-
-            </a>
-
-
-            <a href="#contact" class="involved-card">
-
-                <i class="fa-solid fa-people-group"></i>
-
-                <strong>
-                    Volunteer
-                </strong>
-
-                <span>
-                    Help us connect with Ward 2 residents.
-                </span>
-
-            </a>
-
-
-            <a href="#contact" class="involved-card">
-
-                <i class="fa-solid fa-comments"></i>
-
-                <strong>
-                    Share Your Concerns
-                </strong>
-
-                <span>
-                    Tell us what matters in your neighbourhood.
-                </span>
-
-            </a>
 
         </div>
 
