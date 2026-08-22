@@ -491,9 +491,18 @@
         .hero-actions {
             margin-top: 28px;
 
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 12px;
+            width: 100%;
+        }
+
+        .hero-actions .btn {
+            width: 100%;
+            min-width: 0;
+            padding-left: 12px;
+            padding-right: 12px;
+            text-align: center;
         }
 
         .btn {
@@ -1452,6 +1461,20 @@
                 font-size: 0.94rem;
             }
 
+            .hero-actions {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 6px;
+            }
+
+            .hero-actions .btn {
+                min-height: 58px;
+                padding: 8px 5px;
+                font-size: 0.72rem;
+                line-height: 1.2;
+                flex-direction: column;
+                gap: 4px;
+            }
+
             .hero-photo-wrapper {
                 min-height: auto;
                 padding-top: 20px;
@@ -1719,6 +1742,15 @@
                 >
                     <i class="fa-solid fa-sign-hanging"></i>
                     Request a Lawn Sign
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
+                    <i class="fa-solid fa-people-group"></i>
+                    Volunteer
                 </a>
 
 
