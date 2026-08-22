@@ -48,7 +48,9 @@
                 0 8px 28px rgba(15, 23, 42, 0.08);
         }
 
-        * {
+        *,
+        *::before,
+        *::after {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
@@ -57,30 +59,71 @@
         html {
             scroll-behavior: smooth;
             scroll-padding-top: 110px;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%;
+            font-size: 16px;
         }
 
         body {
-            font-family:
-                system-ui,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Arial,
-                sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
 
             background: var(--light-bg);
             color: var(--text-main);
             line-height: 1.65;
             overflow-x: hidden;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
         }
 
         img {
+            display: block;
             max-width: 100%;
+            height: auto;
+            border-style: none;
         }
 
         a {
             color: inherit;
+            background-color: transparent;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            margin: 0;
+            font: inherit;
+            color: inherit;
+            line-height: inherit;
+            border-radius: 0;
+        }
+
+        button,
+        [type="button"],
+        [type="reset"],
+        [type="submit"] {
+            -webkit-appearance: button;
+            appearance: button;
+            cursor: pointer;
+        }
+
+        button::-moz-focus-inner,
+        [type="button"]::-moz-focus-inner,
+        [type="reset"]::-moz-focus-inner,
+        [type="submit"]::-moz-focus-inner {
+            padding: 0;
+            border-style: none;
+        }
+
+        textarea {
+            overflow: auto;
+            resize: vertical;
+        }
+
+        [hidden] {
+            display: none !important;
         }
 
         section {
@@ -99,6 +142,7 @@
         ========================================================= */
 
         .sticky-wrapper {
+            position: -webkit-sticky;
             position: sticky;
             top: 0;
             z-index: 999;
