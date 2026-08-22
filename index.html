@@ -476,6 +476,10 @@
         .hero-point {
             padding: 7px 12px;
 
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+
             border: 1px solid
                 rgba(255,255,255,0.2);
 
@@ -484,8 +488,15 @@
 
             border-radius: 50px;
 
+            color: var(--white);
             font-size: 0.83rem;
             font-weight: 700;
+        }
+
+        .hero-point i {
+            color: var(--gold);
+            font-size: 0.9rem;
+            flex: 0 0 auto;
         }
 
         .hero-actions {
@@ -1656,14 +1667,17 @@
             <div class="hero-points">
 
                 <span class="hero-point">
+                    <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
                     Safe Neighbourhoods
                 </span>
 
                 <span class="hero-point">
+                    <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     Responsible Growth
                 </span>
 
                 <span class="hero-point">
+                    <i class="fa-solid fa-landmark" aria-hidden="true"></i>
                     Accountable City Hall
                 </span>
 
