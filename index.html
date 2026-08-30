@@ -57,7 +57,7 @@
 
         html {
             scroll-behavior: smooth;
-            scroll-padding-top: 110px;
+            scroll-padding-top: 50px;
             -webkit-text-size-adjust: 100%;
             text-size-adjust: 100%;
             font-size: 16px;
@@ -112,7 +112,7 @@
             padding-right: 22px;
         }
 
-        /* HEADER */
+        /* TOP BAR ONLY (STICKY) */
         .sticky-wrapper {
             position: -webkit-sticky;
             position: sticky;
@@ -129,7 +129,7 @@
         .top-bar-inner {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 7px 20px;
+            padding: 8px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -165,95 +165,6 @@
         .social-links a:hover {
             color: var(--gold);
             transform: translateY(-1px);
-        }
-
-        header { background: var(--white); }
-
-        .header-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            min-height: 72px;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .logo {
-            text-decoration: none;
-            color: var(--navy-dark);
-            line-height: 1.05;
-        }
-
-        .logo-first, .logo-last {
-            display: block;
-            font-size: 1rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-        .logo-last { margin-top: 3px; }
-
-        .logo-sub {
-            display: block;
-            margin-top: 5px;
-            color: var(--text-light);
-            font-size: 0.7rem;
-            font-weight: 700;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .desktop-nav {
-            display: flex;
-            align-items: center;
-            list-style: none;
-            gap: 22px;
-        }
-
-        .desktop-nav a {
-            text-decoration: none;
-            color: var(--text-heading);
-            font-size: 0.93rem;
-            font-weight: 700;
-            transition: 0.2s;
-        }
-
-        .desktop-nav a:hover { color: var(--red); }
-
-        .header-cta {
-            padding: 10px 17px;
-            background: var(--red);
-            color: var(--white) !important;
-            border-radius: 6px;
-        }
-
-        .header-cta:hover { background: var(--red-hover); }
-
-        .hamburger {
-            display: none;
-            background: transparent;
-            border: none;
-            color: var(--navy-dark);
-            font-size: 1.6rem;
-            cursor: pointer;
-        }
-
-        .mobile-nav {
-            display: none;
-            background: var(--white);
-            border-top: 1px solid var(--border);
-        }
-
-        .mobile-nav.active { display: block; }
-        .mobile-nav ul { list-style: none; padding: 10px 20px 20px; }
-        .mobile-nav li { border-bottom: 1px solid var(--border); }
-        .mobile-nav a {
-            display: block;
-            padding: 14px 5px;
-            text-decoration: none;
-            color: var(--text-heading);
-            font-weight: 700;
         }
 
         /* HERO */
@@ -487,7 +398,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
             transition: all 0.25s;
-            scroll-margin-top: 130px;
+            scroll-margin-top: 70px;
         }
 
         .priority-card:hover {
@@ -870,9 +781,6 @@
 
         /* RESPONSIVE */
         @media (max-width: 950px) {
-            .desktop-nav { display: none; }
-            .hamburger { display: block; }
-
             .hero-grid {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -926,40 +834,6 @@
             </div>
         </div>
     </div>
-
-    <header>
-        <div class="header-container">
-            <a href="#home" class="logo">
-                <span class="logo-first">HAMIDREZA</span>
-                <span class="logo-last">KHEIRKHAH GHEHI</span>
-                <span class="logo-sub">Candidate for Ward 2 City Councillor, Richmond Hill</span>
-            </a>
-
-            <ul class="desktop-nav">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#priorities">Priorities</a></li>
-                <li><a href="#ward2">Ward 2</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#contact" class="header-cta">Get Involved</a></li>
-            </ul>
-
-            <button class="hamburger" id="menuButton" aria-label="Open navigation menu" aria-expanded="false">
-                <i class="fa-solid fa-bars"></i>
-            </button>
-        </div>
-
-        <nav class="mobile-nav" id="mobileMenu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#priorities">Priorities</a></li>
-                <li><a href="#ward2">Ward 2</a></li>
-                <li><a href="#about">Meet Hamidreza</a></li>
-                <li><a href="#contact">Get Involved</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 </div>
 
 <!-- HERO BANNER -->
@@ -1309,25 +1183,6 @@
 </footer>
 
 <script>
-    const menuButton = document.getElementById("menuButton");
-    const mobileMenu = document.getElementById("mobileMenu");
-
-    menuButton.addEventListener("click", function () {
-        mobileMenu.classList.toggle("active");
-        const isOpen = mobileMenu.classList.contains("active");
-        menuButton.setAttribute("aria-expanded", isOpen);
-        menuButton.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
-    });
-
-    const mobileLinks = mobileMenu.querySelectorAll("a");
-    mobileLinks.forEach(function (link) {
-        link.addEventListener("click", function () {
-            mobileMenu.classList.remove("active");
-            menuButton.setAttribute("aria-expanded", "false");
-            menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        });
-    });
-
     document.getElementById("year").textContent = new Date().getFullYear();
 
     const campaignForm = document.getElementById("campaignForm");
