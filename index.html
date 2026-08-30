@@ -335,23 +335,16 @@
             color: #cbd5e1;
         }
 
+        /* SHORTENED TITLE STYLING */
         .candidate-position {
             margin-top: 18px;
             color: #dbeafe;
-            font-size: 1.4rem;
+            font-size: clamp(1rem, 2.5vw, 1.15rem);
             font-weight: 600;
         }
 
-        .hero-message {
-            max-width: 650px;
-            margin-top: 23px;
-            color: #cbd5e1;
-            font-size: 1.08rem;
-            line-height: 1.6;
-        }
-
         .hero-points {
-            margin-top: 20px;
+            margin-top: 28px;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
@@ -886,7 +879,6 @@
             }
 
             .hero-content { padding: 75px 22px 35px; }
-            .hero-message { margin-left: auto; margin-right: auto; }
             .hero-points, .hero-actions { justify-content: center; }
 
             .hero-photo-wrapper {
@@ -983,12 +975,8 @@
             </h1>
 
             <div class="candidate-position">
-                Candidate for Ward 2 City Councillor, Richmond Hill
+                Candidate for Ward 2 Councillor, Richmond Hill
             </div>
-
-            <p class="hero-message">
-                Working for safer neighbourhoods, responsible growth, accountable municipal government, and a stronger voice for Ward 2 residents at City Hall.
-            </p>
 
             <!-- TOP 3 HIGHLIGHTS IN HERO -->
             <div class="hero-points">
