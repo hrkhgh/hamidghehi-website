@@ -341,21 +341,36 @@
         }
 
         .hero-point {
-            padding: 7px 12px;
+            padding: 7px 14px;
             display: inline-flex;
             align-items: center;
-            gap: 7px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.06);
+            gap: 8px;
+            border: 1px solid rgba(255,255,255,0.25);
+            background: rgba(255,255,255,0.08);
             border-radius: 50px;
             color: var(--white);
-            font-size: 0.83rem;
+            font-size: 0.85rem;
             font-weight: 700;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .hero-point:hover {
+            background: var(--white);
+            color: var(--navy-dark);
+            border-color: var(--white);
+            transform: translateY(-2px);
         }
 
         .hero-point i {
             color: var(--gold);
             font-size: 0.9rem;
+            transition: color 0.25s ease;
+        }
+
+        .hero-point:hover i {
+            color: var(--navy-dark);
         }
 
         .hero-actions {
@@ -462,6 +477,7 @@
             border-radius: 10px;
             box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
             transition: all 0.25s;
+            scroll-margin-top: 130px; /* Offset for smooth scroll positioning */
         }
 
         .priority-card:hover {
@@ -959,18 +975,18 @@
 
             <!-- TOP 3 HIGHLIGHTS IN HERO -->
             <div class="hero-points">
-                <span class="hero-point">
+                <a href="#traffic-safety" class="hero-point">
                     <i class="fa-solid fa-traffic-light" aria-hidden="true"></i>
                     Traffic & Road Safety
-                </span>
-                <span class="hero-point">
+                </a>
+                <a href="#responsible-growth" class="hero-point">
                     <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
                     Responsible Growth
-                </span>
-                <span class="hero-point">
-                    <i class="fa-solid fa-landmark" aria-hidden="true"></i>
-                    Accountable City Hall
-                </span>
+                </a>
+                <a href="#local-business" class="hero-point">
+                    <i class="fa-solid fa-store" aria-hidden="true"></i>
+                    Local Business Support
+                </a>
             </div>
 
             <div class="hero-actions">
@@ -1005,7 +1021,7 @@
 
         <div class="priority-grid">
             <!-- TOP 1: TRAFFIC & ROAD SAFETY -->
-            <article class="priority-card featured">
+            <article class="priority-card featured" id="traffic-safety">
                 <span class="priority-badge">Top Priority</span>
                 <div class="priority-icon">
                     <i class="fa-solid fa-traffic-light"></i>
@@ -1017,7 +1033,7 @@
             </article>
 
             <!-- TOP 2: RESPONSIBLE GROWTH -->
-            <article class="priority-card featured">
+            <article class="priority-card featured" id="responsible-growth">
                 <span class="priority-badge">Top Priority</span>
                 <div class="priority-icon">
                     <i class="fa-solid fa-city"></i>
@@ -1028,8 +1044,8 @@
                 </p>
             </article>
 
-            <!-- TOP 3: LOCAL BUSINESS SUPPORT (NEW) -->
-            <article class="priority-card featured">
+            <!-- TOP 3: LOCAL BUSINESS SUPPORT -->
+            <article class="priority-card featured" id="local-business">
                 <span class="priority-badge">Top Priority</span>
                 <div class="priority-icon">
                     <i class="fa-solid fa-store"></i>
